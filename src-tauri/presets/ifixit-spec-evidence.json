@@ -1,0 +1,965 @@
+[
+  {
+    "name": "iPhone 18 Pro",
+    "source": "https://www.ifixit.com/Device/iPhone_18_Pro",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 27 Processor: A20 Pro chip 6‑core CPU with 2 super and 4 efficiency cores 7‑core GPU with Neural Accelerators Dual 16‑core Neural Engines Hardware‑accelerated ray tracing RAM: 12 GB LPDDR5X Storage: 256 GB, 512 GB, 1 TB, or 2 TB Batt"
+    ],
+    "memory": [
+      "e Neural Engines Hardware‑accelerated ray tracing RAM: 12 GB LPDDR5X Storage: 256 GB, 512 GB, 1 TB, or 2 TB Battery: 4,056 mAh li-ion"
+    ]
+  },
+  {
+    "name": "iPhone Duo",
+    "source": "https://www.ifixit.com/Device/iPhone_Duo",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 27 Processor: A20 Pro chip 6‑core CPU with 2 super and 4 efficiency cores 7‑core GPU with Neural Accelerators Dual 16‑core Neural Engines Hardware‑accelerated ray tracing RAM: 12 GB LPDDR5X Storage: 256 GB, 512 GB, 1 TB, or 2 TB Batt"
+    ],
+    "memory": [
+      "e Neural Engines Hardware‑accelerated ray tracing RAM: 12 GB LPDDR5X Storage: 256 GB, 512 GB, 1 TB, or 2 TB Batteries: Up to 24 hours"
+    ]
+  },
+  {
+    "name": "iPhone 17e",
+    "source": "https://www.ifixit.com/Device/iPhone_17e",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 26 Processor: A19 Chip 6‑core CPU with 2 performance and 4 efficiency cores 4‑core GPU 16‑core Neural Engine Storage: 256 or 512 GB Battery: Up to 26 hours of video playback Ports: 1x USB-C connector Charging DisplayPort USB 2.0 (up "
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPhone 18 Pro Max",
+    "source": "https://www.ifixit.com/Device/iPhone_18_Pro_Max",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 27 Processor: A20 Pro chip 6‑core CPU with 2 super and 4 efficiency cores 7‑core GPU with Neural Accelerators Dual 16‑core Neural Engines Hardware‑accelerated ray tracing RAM: 12 GB LPDDR5X Storage: 256 GB, 512 GB, 1 TB, or 2 TB Batt"
+    ],
+    "memory": [
+      "e Neural Engines Hardware‑accelerated ray tracing RAM: 12 GB LPDDR5X Storage: 256 GB, 512 GB, 1 TB, or 2 TB Battery: 5,391 mAh li-ion"
+    ]
+  },
+  {
+    "name": "iPhone 17 Pro Max",
+    "source": "https://www.ifixit.com/Device/iPhone_17_Pro_Max",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 26 Processor: A19 Pro chip 6‑core CPU with 2 performance and 4 efficiency cores 6‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware‑accelerated ray tracing RAM: (in progress) Storage: 256 GB, 512 GB, 1 TB, or 2 TB Batt"
+    ],
+    "memory": [
+      "re Neural Engine Hardware‑accelerated ray tracing RAM: (in progress) Storage: 256 GB, 512 GB, 1 TB, or 2 TB Battery: (in progress) mA"
+    ]
+  },
+  {
+    "name": "iPhone 17 Pro",
+    "source": "https://www.ifixit.com/Device/iPhone_17_Pro",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 26 Processor: A19 Pro chip 6‑core CPU with 2 performance and 4 efficiency cores 6‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware‑accelerated ray tracing RAM: 12 GB LPDDR5X Storage: 256 GB, 512 GB, or 1 TB Battery: 1"
+    ],
+    "memory": [
+      "re Neural Engine Hardware‑accelerated ray tracing RAM: 12 GB LPDDR5X Storage: 256 GB, 512 GB, or 1 TB Battery: 16.57 Wh, up to 33 hou"
+    ]
+  },
+  {
+    "name": "iPhone 17",
+    "source": "https://www.ifixit.com/Device/iPhone_17",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 26 Processor: A19 chip 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware‑accelerated ray tracing Storage: 256 GB or 512 GB Battery: Up to 30 hours of video playbac"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPhone Air",
+    "source": "https://www.ifixit.com/Device/iPhone_Air",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 26 Processor: A19 Pro Chip 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: Unknown Storage: 256 GB, 512 GB, or 1 TB Battery: 4006 mAh, up to 27 hours of video playback Ports: 1x USB Type-C c"
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: Unknown Storage: 256 GB, 512 GB, or 1 TB Battery: 4006 mAh, up to 27 hours of "
+    ]
+  },
+  {
+    "name": "iPhone 16e",
+    "source": "https://www.ifixit.com/Device/iPhone_16e",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 18 Processor: A18 Chip 6‑core CPU with 2 performance and 4 efficiency cores 4‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128GB, 256GB, or 512 GB Battery: 3561 mAh, up to 22 hours of video playback Ports: 1x USB-C connector Cha"
+    ],
+    "memory": [
+      "efficiency cores 4‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128GB, 256GB, or 512 GB Battery: 3561 mAh, up to 22 hours of vid"
+    ]
+  },
+  {
+    "name": "iPhone 16 Pro Max",
+    "source": "https://www.ifixit.com/Device/iPhone_16_Pro_Max",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 18 Processor: A18 Pro chip 6‑core CPU with 2 performance and 4 efficiency cores 6‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 256, 512 GB, or 1 TB Battery: 4676 mAh, up to 33 hours of video playback Qi2 wireless charging up to "
+    ],
+    "memory": [
+      "efficiency cores 6‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 256, 512 GB, or 1 TB Battery: 4676 mAh, up to 33 hours of video "
+    ]
+  },
+  {
+    "name": "iPhone 16 Pro",
+    "source": "https://www.ifixit.com/Device/iPhone_16_Pro",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 18 Processor: A18 Pro chip 6‑core CPU with 2 performance and 4 efficiency cores 6‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 13.942 Wh, 3582 mAh, up to 27 hours of video playback Qi2 wireless"
+    ],
+    "memory": [
+      "efficiency cores 6‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 13.942 Wh, 3582 mAh, up to 27"
+    ]
+  },
+  {
+    "name": "iPhone 16 Plus",
+    "source": "https://www.ifixit.com/Device/iPhone_16_Plus",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 18 Processor: A18 Chip 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128GB, 256GB, or 512GB Battery: 4006 mAh, up to 27 hours of video playback Ports: 1x USB-C connector Char"
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128GB, 256GB, or 512GB Battery: 4006 mAh, up to 27 hours of vide"
+    ]
+  },
+  {
+    "name": "iPhone 16",
+    "source": "https://www.ifixit.com/Device/iPhone_16",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 18 Processor: A18 Chip 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128GB, 256GB, or 512GB Battery: 3561 mAh, up to 22 hours of video playback Ports: 1x USB-C connector Char"
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128GB, 256GB, or 512GB Battery: 3561 mAh, up to 22 hours of vide"
+    ]
+  },
+  {
+    "name": "iPhone 15 Pro Max",
+    "source": "https://www.ifixit.com/Device/iPhone_15_Pro_Max",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 17 Processor: A17 Pro chip 6‑core CPU with 2 performance and 4 efficiency cores 6‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 256, 512 GB, or 1 TB Battery: 4422 mAh, up to 29 hours of video playback Ports: 1x USB-C connector Ch"
+    ],
+    "memory": [
+      "efficiency cores 6‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 256, 512 GB, or 1 TB Battery: 4422 mAh, up to 29 hours of video "
+    ]
+  },
+  {
+    "name": "iPhone 15 Pro",
+    "source": "https://www.ifixit.com/Device/iPhone_15_Pro",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 17 Processor: A17 Pro chip 6‑core CPU with 2 performance and 4 efficiency cores 6‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 3274 mAh, up to 23 hours of video playback Ports: 1x USB-C connect"
+    ],
+    "memory": [
+      "efficiency cores 6‑core GPU 16‑core Neural Engine RAM: 8 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 3274 mAh, up to 23 hours of v"
+    ]
+  },
+  {
+    "name": "iPhone 14 Pro Max",
+    "source": "https://www.ifixit.com/Device/iPhone_14_Pro_Max",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 16 Processor: A16 Bionic chip 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 4323 mAh, 16.68 Wh Display: 6.7-inch “Super Retina XDR” OLED Ce"
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 4323 mAh, 16.68 Wh Display: 6"
+    ]
+  },
+  {
+    "name": "iPhone 15",
+    "source": "https://www.ifixit.com/Device/iPhone_15",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 17 Processor: A16 Bionic chip 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, or 512 GB Battery: 3349 mAh, up to 20 hours of video playback Ports: 1x USB-C connector "
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, or 512 GB Battery: 3349 mAh, up to 20 hours of video p"
+    ]
+  },
+  {
+    "name": "iPhone 14 Pro",
+    "source": "https://www.ifixit.com/Device/iPhone_14_Pro",
+    "status": 200,
+    "matches": [
+      " System: iOS 16 or newer Processor: A16 Bionic chip 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 3200 mAh, 12.38 Wh Display: 6.1-inch “Super Retina XDR” OLED Ce"
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 3200 mAh, 12.38 Wh Display: 6"
+    ]
+  },
+  {
+    "name": "iPhone 14 Plus",
+    "source": "https://www.ifixit.com/Device/iPhone_14_Plus",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 16 Processor: A15 Bionic chip (2022 edition) 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB comment Battery: 3095 mAh, 11.97 Wh <- update /comment Di"
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB comment Battery: 3095 mAh, 11.97 Wh <-"
+    ]
+  },
+  {
+    "name": "iPhone 15 Plus",
+    "source": "https://www.ifixit.com/Device/iPhone_15_Plus",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 17 Processor: A16 Bionic chip 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, or 512 GB Battery: 4383 mAh, up to 20 hours of video playback Ports: 1x USB-C connector "
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, or 512 GB Battery: 4383 mAh, up to 20 hours of video p"
+    ]
+  },
+  {
+    "name": "iPhone 14",
+    "source": "https://www.ifixit.com/Device/iPhone_14",
+    "status": 200,
+    "matches": [
+      "Operating System: iOS 16 Processor: A15 Bionic with 5-core GPU 6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, or 512 GB Battery: 3279 mAh, 12.68 Wh Display: 6.1-inch “Super Retina XDR” OL"
+    ],
+    "memory": [
+      "efficiency cores 5‑core GPU 16‑core Neural Engine RAM: 6 GB Storage: 128, 256, or 512 GB Battery: 3279 mAh, 12.68 Wh Display: 6.1-inc"
+    ]
+  },
+  {
+    "name": "iPhone 13 Pro",
+    "source": "https://www.ifixit.com/Device/iPhone_13_Pro",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A15 Bionic with 16-core Neural Engine 5 nm process 6-core CPU 5-core GPU RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 3095 mAh, 11.97 Wh Sensors: Face ID LiDAR scanner Barometer Three-axis gyro Accelerometer Pr"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 5-core GPU RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 3095 mAh, 11.97 Wh Sensors: F"
+    ]
+  },
+  {
+    "name": "iPhone 13 Pro Max",
+    "source": "https://www.ifixit.com/Device/iPhone_13_Pro_Max",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A15 Bionic with 16-core Neural Engine 5 nm process 6-core CPU 5-core GPU RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 4352 mAh, 17.02 Wh Sensors: Face ID LiDAR scanner Barometer Three-axis gyro Accelerometer Pr"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 5-core GPU RAM: 6 GB Storage: 128, 256, 512 GB, or 1 TB Battery: 4352 mAh, 17.02 Wh Sensors: F"
+    ]
+  },
+  {
+    "name": "iPhone SE (3rd generation)",
+    "source": "https://www.ifixit.com/Device/iPhone_SE_2022",
+    "status": 200,
+    "matches": [
+      "ization (1080p and 720p) Processor: A15 Bionic with 16-core Neural Engine 5 nm process 6-core CPU (2 performance and 4 efficiency cores) 4-core GPU RAM: 4 GB Storage: 64, 128, 256 GB Battery: Li-Ion 2018 mAh, non-removable (6.96 Wh) Sensors: Touch ID fing"
+    ],
+    "memory": [
+      "ttery (2018 mAh) along with one extra gigabyte of RAM (4 GB). The camera, while not physically improved, is bolstered by Smart HDR 4,",
+      "(2 performance and 4 efficiency cores) 4-core GPU RAM: 4 GB Storage: 64, 128, 256 GB Battery: Li-Ion 2018 mAh, non-removable (6.96 Wh"
+    ]
+  },
+  {
+    "name": "iPhone 13 mini",
+    "source": "https://www.ifixit.com/Device/iPhone_13_mini",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A15 Bionic with 16-core Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 4 GB Storage: 128, 256, or 512 GB Battery: 2406 mAh Sensors: Face ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient light s"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 4 GB Storage: 128, 256, or 512 GB Battery: 2406 mAh Sensors: Face ID Barometer"
+    ]
+  },
+  {
+    "name": "iPhone 12 Pro Max",
+    "source": "https://www.ifixit.com/Device/iPhone_12_Pro_Max",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A14 Bionic with Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 6 GB Storage: 128, 256, or 512 GB Sensors: Face ID Compass Barometer Three-axis gyro Accelerometer Proximity sensor Ambient light sensor Wireless Con"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 6 GB Storage: 128, 256, or 512 GB Sensors: Face ID Compass Barometer Three-axi"
+    ]
+  },
+  {
+    "name": "iPhone 12 Pro",
+    "source": "https://www.ifixit.com/Device/iPhone_12_Pro",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A14 Bionic with Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: link|https://www.macrumors.com/2020/10/14/how-much-ram-iphone-12-pro-has/|6 GB Storage: 128, 256, or 512 GB Battery: 2815 mAh Up to 17 hours of video"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: link|https://www.macrumors.com/2020/10/14/how-much-ram-iphone-12-pro-has/|6 GB"
+    ]
+  },
+  {
+    "name": "iPhone 12",
+    "source": "https://www.ifixit.com/Device/iPhone_12",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A14 Bionic with Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 4 GB Storage: 64, 128, or 256 GB Battery: 2815 mAh Up to 17 hours of video playback Up to 65 hours of audio playback MagSafe wireless charging, up to"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 4 GB Storage: 64, 128, or 256 GB Battery: 2815 mAh Up to 17 hours of video pla"
+    ]
+  },
+  {
+    "name": "iPhone 13",
+    "source": "https://www.ifixit.com/Device/iPhone_13",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A15 Bionic with 16-core Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 4 GB Storage: 128, 256, or 512 GB Battery: 3227 mAh, 12.41 Wh Sensors: Face ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambie"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 4 GB Storage: 128, 256, or 512 GB Battery: 3227 mAh, 12.41 Wh Sensors: Face ID"
+    ]
+  },
+  {
+    "name": "iPhone 12 mini",
+    "source": "https://www.ifixit.com/Device/iPhone_12_mini",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A14 Bionic with Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 4 GB Storage: 64, 128, or 256 GB Sensors: Face ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient light sensor Wireless Connectivity"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 4-core GPU RAM: 4 GB Storage: 64, 128, or 256 GB Sensors: Face ID Barometer Three-axis gyro Ac"
+    ]
+  },
+  {
+    "name": "iPhone 11 Pro",
+    "source": "https://www.ifixit.com/Device/iPhone_11_Pro",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A13 Bionic with 3rd-generation Neural Engine 7 nm process 6 cores RAM: TBD Storage: 64, 256, or 512 GB Sensors: Face ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient light sensor Wireless Connectivity"
+    ],
+    "memory": [
+      "3rd-generation Neural Engine 7 nm process 6 cores RAM: TBD Storage: 64, 256, or 512 GB Sensors: Face ID Barometer Three-axis gyro Acc"
+    ]
+  },
+  {
+    "name": "iPhone 11 Pro Max",
+    "source": "https://www.ifixit.com/Device/iPhone_11_Pro_Max",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A13 Bionic with 3rd-generation Neural Engine 7 nm process 6 cores RAM: TBD Storage: 64, 256, or 512 GB Sensors: Face ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient light sensor Wireless Connectivity"
+    ],
+    "memory": [
+      "3rd-generation Neural Engine 7 nm process 6 cores RAM: TBD Storage: 64, 256, or 512 GB Sensors: Face ID Barometer Three-axis gyro Acc"
+    ]
+  },
+  {
+    "name": "iPhone 11",
+    "source": "https://www.ifixit.com/Device/iPhone_11",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A13 Bionic with 3rd-generation Neural Engine 7 nm process 6 cores RAM: 4 GB Storage: 64, 128, or 256 GB Sensors: Face ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient light sensor Wireless Connectivit"
+    ],
+    "memory": [
+      "3rd-generation Neural Engine 7 nm process 6 cores RAM: 4 GB Storage: 64, 128, or 256 GB Sensors: Face ID Barometer Three-axis gyro Ac"
+    ]
+  },
+  {
+    "name": "iPhone SE (2nd generation)",
+    "source": "https://www.ifixit.com/Device/iPhone_SE_2020",
+    "status": 200,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPhone XS",
+    "source": "https://www.ifixit.com/Device/iPhone_XS",
+    "status": 200,
+    "matches": [
+      "www.apple.com|Apple Inc. Processor: Apple A12 Bionic chip with next-generation Neural Engine Operating System: iOS 12 Dimensions: : 5.65 x 2.79 x 0.30 in (143.6 x 70.9 x 7.7 mm) Weight: 177 g (6.24 oz) Storage: 64, 256, or 512 GB flash memory Colors: Gold"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPhone XS Max",
+    "source": "https://www.ifixit.com/Device/iPhone_XS_Max",
+    "status": 200,
+    "matches": [
+      "www.apple.com|Apple Inc. Processor: Apple A12 Bionic chip with next-generation Neural Engine Operating System: iOS 12 Dimensions: 6.20 x 3.05 x 0.30 in (157.5 x 77.4 x 7.7 mm) Weight: 177 g (6.24 oz) Storage: 64, 256, or 512 GB flash memory Colors: Gold, "
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPhone XR",
+    "source": "https://www.ifixit.com/Device/iPhone_XR",
+    "status": 200,
+    "matches": [
+      "www.apple.com|Apple Inc. Processor: Apple A12 Bionic chip with next-generation Neural Engine Operating System: iOS 12 Dimensions: 5.94 x 2.98 x 0.33 in (150.9 x 75.7 x 8.3 mm) Weight: 6.84 oz (194 g) Storage: 64, 128, or 256 GB Flash Memory Colors: Black,"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPhone X",
+    "source": "https://www.ifixit.com/Device/iPhone_X",
+    "status": 200,
+    "matches": [
+      "a for facial recognition Processor: Apple A11 chip with 64 bit architecture and embedded M11 motion coprocessor RAM: 3 GB Storage: 64, 256 GB Flash Memory Sensors: Barometer Three-axis gyro Accelerometer Proximity sensor Ambient light sensor Wireless Conn"
+    ],
+    "memory": [
+      " architecture and embedded M11 motion coprocessor RAM: 3 GB Storage: 64, 256 GB Flash Memory Sensors: Barometer Three-axis gyro Accel"
+    ]
+  },
+  {
+    "name": "iPhone 8 Plus",
+    "source": "https://www.ifixit.com/Device/iPhone_8_Plus",
+    "status": 200,
+    "matches": [
+      "into the new Home button Processor: Apple A11 chip with 64 bit architecture and embedded M11 motion coprocessor RAM: Storage: 64, 256 GB Flash Memory Sensors: Touch ID fingerprint sensor Barometer Three-axis gyro Accelerometer Proximity sensor Ambient lig"
+    ],
+    "memory": [
+      " architecture and embedded M11 motion coprocessor RAM: Storage: 64, 256 GB Flash Memory Sensors: Touch ID fingerprint sensor Baromete"
+    ]
+  },
+  {
+    "name": "iPhone 8",
+    "source": "https://www.ifixit.com/Device/iPhone_8",
+    "status": 200,
+    "matches": [
+      "ilt into the Home button Processor: Apple A11 chip with 64 bit architecture and embedded M11 motion coprocessor RAM: Storage: 64, 128, and 256 GB flash memory Sensors: Touch ID fingerprint sensor Barometer Three-axis gyro Accelerometer Proximity sensor Am"
+    ],
+    "memory": [
+      " architecture and embedded M11 motion coprocessor RAM: Storage: 64, 128, and 256 GB flash memory Sensors: Touch ID fingerprint sensor"
+    ]
+  },
+  {
+    "name": "iPhone 7",
+    "source": "https://www.ifixit.com/Device/iPhone_7",
+    "status": 200,
+    "matches": [
+      "into the new Home button Processor: 2.34 GHz Apple A10 chip with 64-bit architecture and embedded M10 motion coprocessor RAM: Storage: 32, 128, and 256 GB flash memory Sensors: Touch ID fingerprint sensor Barometer Three-axis gyro Accelerometer Proximity "
+    ],
+    "memory": [
+      " architecture and embedded M10 motion coprocessor RAM: Storage: 32, 128, and 256 GB flash memory Sensors: Touch ID fingerprint sensor"
+    ]
+  },
+  {
+    "name": "iPhone 7 Plus",
+    "source": "https://www.ifixit.com/Device/iPhone_7_Plus",
+    "status": 200,
+    "matches": [
+      "into the new Home button Processor: 1.8 GHz Apple A10 chip with 64 bit architecture and embedded M10 motion coprocessor RAM: Storage: 32, 128, 256 GB Flash Memory Sensors: Touch ID fingerprint sensor Barometer Three-axis gyro Accelerometer Proximity senso"
+    ],
+    "memory": [
+      " architecture and embedded M10 motion coprocessor RAM: Storage: 32, 128, 256 GB Flash Memory Sensors: Touch ID fingerprint sensor Bar"
+    ]
+  },
+  {
+    "name": "iPhone SE (1st generation)",
+    "source": "https://www.ifixit.com/Device/iPhone_SE",
+    "status": 200,
+    "matches": [
+      ".3 - iOS 15.7.2 Platform CPU : A9 chip with 64‑bit architecture MPU : Embedded M9 motion coprocessor Storage : 16, 32, 64, 128 GB storage options Display Retina display 4‑inch (diagonal) LED‑backlit widescreen Multi‑Touch display 1136‑by‑640‑pixel re"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPhone 6s",
+    "source": "https://www.ifixit.com/Device/iPhone_6s",
+    "status": 200,
+    "matches": [
+      "side illumination sensor Processor: 1.8 GHz Apple A9 chip with 64 bit architecture and M9 motion coprocessor RAM: 2 GB LPDDR4 Storage: 16, 32, 64, and 128 GB flash memory Sensors: Touch ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient l"
+    ],
+    "memory": [
+      "ith 64 bit architecture and M9 motion coprocessor RAM: 2 GB LPDDR4 Storage: 16, 32, 64, and 128 GB flash memory Sensors: Touch ID Bar"
+    ]
+  },
+  {
+    "name": "iPhone 6s Plus",
+    "source": "https://www.ifixit.com/Device/iPhone_6s_Plus",
+    "status": 200,
+    "matches": [
+      "side illumination sensor Processor: 1.8 GHz Apple A9 chip with 64 bit architecture and M9 motion coprocessor RAM: 2 GB LPDDR4 Storage: 16, 32, 64, and 128 GB flash memory Sensors: Touch ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient l"
+    ],
+    "memory": [
+      "ith 64 bit architecture and M9 motion coprocessor RAM: 2 GB LPDDR4 Storage: 16, 32, 64, and 128 GB flash memory Sensors: Touch ID Bar"
+    ]
+  },
+  {
+    "name": "iPhone 6 Plus",
+    "source": "https://www.ifixit.com/Device/iPhone_6_Plus",
+    "status": 200,
+    "matches": [
+      "DR for photos and videos Processor: 1.39 GHz Apple A8 chip with 64 bit architecture and M8 motion coprocessor RAM: 1 GB LPDDR3 Storage: 16, 64, 128 GB Flash Memory Sensors: Touch ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient light se"
+    ],
+    "memory": [
+      "ith 64 bit architecture and M8 motion coprocessor RAM: 1 GB LPDDR3 Storage: 16, 64, 128 GB Flash Memory Sensors: Touch ID Barometer T"
+    ]
+  },
+  {
+    "name": "iPhone 5s",
+    "source": "https://www.ifixit.com/Device/iPhone_5s",
+    "status": 200,
+    "matches": [
+      "to while recording video Processor: Apple A7 RAM: 1 GB LPDDR3 RAM Storage: 16, 32, and 64 GB flash memory Wireless Connectivity: Integrated 802.11 a/b/g/n (Dual band 2.4 GHz and 5 GHz) Bluetooth 4.0 GSM, CDMA, 3G, EVDO, HSPA+, LTE Digital Compass GPS and "
+    ],
+    "memory": [
+      "o Photo while recording video Processor: Apple A7 RAM: 1 GB LPDDR3 RAM Storage: 16, 32, and 64 GB flash memory Wireless Connectivity:"
+    ]
+  },
+  {
+    "name": "iPhone 6",
+    "source": "https://www.ifixit.com/Device/iPhone_6",
+    "status": 200,
+    "matches": [
+      "DR for photos and videos Processor: 1.2 GHz Apple A8 chip with 64 bit architecture and M8 motion coprocessor RAM: 1 GB LPDDR3 Storage: 16, 32, 64, and 128 GB flash memory Sensors: Touch ID Barometer Three-axis gyro Accelerometer Proximity sensor Ambient l"
+    ],
+    "memory": [
+      "ith 64 bit architecture and M8 motion coprocessor RAM: 1 GB LPDDR3 Storage: 16, 32, 64, and 128 GB flash memory Sensors: Touch ID Bar"
+    ]
+  },
+  {
+    "name": "iPhone 5c",
+    "source": "https://www.ifixit.com/Device/iPhone_5c",
+    "status": 200,
+    "matches": [
+      "to while recording video Processor: Apple A6 RAM: 1 GB Storage: 8, 16, and 32 GB flash memory Wireless Connectivity: Integrated 802.11 a/b/g/n (Dual band 2.4 GHz and 5 GHz) Bluetooth 4.0 Digital Compass GPS and GLONASS signal reception GSM, CDMA, 3G, EVDO"
+    ],
+    "memory": [
+      "o Photo while recording video Processor: Apple A6 RAM: 1 GB Storage: 8, 16, and 32 GB flash memory Wireless Connectivity: Integrated "
+    ]
+  },
+  {
+    "name": "iPhone 5",
+    "source": "https://www.ifixit.com/Device/iPhone_5",
+    "status": 200,
+    "matches": [
+      "to while recording video Processor: Apple A6 RAM: 1 GB DDR2 Storage: 16, 32, 64 GB Flash Memory Wireless Connectivity: Integrated 802.11 a/b/g/n (Dual band 2.4 GHz and 5 GHz) Bluetooth 4.0 GSM model A1428: UMTS/HSPA+/DC-HSDPA (850, 900, 1900, 2100 MHz); G"
+    ],
+    "memory": [
+      "o Photo while recording video Processor: Apple A6 RAM: 1 GB DDR2 Storage: 16, 32, 64 GB Flash Memory Wireless Connectivity: Integrate"
+    ]
+  },
+  {
+    "name": "iPhone 4s",
+    "source": "https://www.ifixit.com/Device/iPhone_4s",
+    "status": 200,
+    "matches": [
+      "on / image stabilization Processor: Apple A5 system-on-a-chip; A5 dual-core processor chip RAM: 512MB DDR2 Sensors: Gyroscope Accelerometer Proximity sensor Ambient light sensor Storage: 8, 16, 32, or 64 GB Flash Memory Wireless Connectivity: Integrated 8"
+    ],
+    "memory": [
+      " A5 system-on-a-chip; A5 dual-core processor chip RAM: 512MB DDR2 Sensors: Gyroscope Accelerometer Proximity sensor Ambient light sen"
+    ]
+  },
+  {
+    "name": "iPhone 3G",
+    "source": "https://www.ifixit.com/Device/iPhone_3G",
+    "status": 200,
+    "matches": [
+      ": 2.0 MP with geotagging Processor: Apple-branded 412 MHz 32-bit Samsung ARM 11 with PowerVR MBX-Lite GPU RAM: 128 MB eDRAM Sensors: Accelerometer, ambient light, two proximity sensors Storage: 8, or 16 GB Flash Memory Wireless Connectivity: Wi-Fi (802.11"
+    ],
+    "memory": [
+      "z 32-bit Samsung ARM 11 with PowerVR MBX-Lite GPU RAM: 128 MB eDRAM Sensors: Accelerometer, ambient light, two proximity sensors Stor"
+    ]
+  },
+  {
+    "name": "iPhone",
+    "source": "https://www.ifixit.com/Device/iPhone_1st_Generation",
+    "status": 200,
+    "matches": [
+      ": 2.0 MP with geotagging Processor: Apple-branded 412 MHz 32-bit Samsung ARM 11 with PowerVR MBX-Lite GPU RAM: 128 MB eDRAM Sensors: Accelerometer, Proximity, Ambient Light Storage: 4, 8, or 16 GB Flash Memory Wireless Connectivity: Wi-Fi (802.11b/g) Quad"
+    ],
+    "memory": [
+      "z 32-bit Samsung ARM 11 with PowerVR MBX-Lite GPU RAM: 128 MB eDRAM Sensors: Accelerometer, Proximity, Ambient Light Storage: 4, 8, o"
+    ]
+  },
+  {
+    "name": "iPhone 4",
+    "source": "https://www.ifixit.com/Device/iPhone_4",
+    "status": 200,
+    "matches": [
+      "720p) at 30fps LED Flash Processor: Apple A4 system-on-a-chip RAM: 512 MB eDRAM Storage: 8, 16, or 32 GB Flash Memory Wireless Connectivity: Integrated 802.11n (2.4 GHz only) Bluetooth 2.1 + EDR Quad-band UMTS/HSDPA (850, 900, 1900, 2100 MHz) and GSM/EDGE"
+    ],
+    "memory": [
+      "ps LED Flash Processor: Apple A4 system-on-a-chip RAM: 512 MB eDRAM Storage: 8, 16, or 32 GB Flash Memory Wireless Connectivity: Inte"
+    ]
+  },
+  {
+    "name": "iPhone 3GS",
+    "source": "https://www.ifixit.com/Device/iPhone_3GS",
+    "status": 200,
+    "matches": [
+      " and VGA video at 30 fps Processor: 600 MHz ARM Cortex A8 with PowerVR SGX GPU RAM: 256 MB eDRAM Sensors: Gyroscope Accelerometer Proximity sensor Ambient light sensor Storage: 8, 16, or 32 GB flash memory Wireless Connectivity: Wi-Fi (802.11b/g) 3G (UMTS"
+    ],
+    "memory": [
+      "essor: 600 MHz ARM Cortex A8 with PowerVR SGX GPU RAM: 256 MB eDRAM Sensors: Gyroscope Accelerometer Proximity sensor Ambient light s"
+    ]
+  },
+  {
+    "name": "iPad Pro 11-inch (M5)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_11-inch_M5",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 13-inch (M4)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_13-inch_M4",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 11-inch (M4)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_11-inch_M4",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 13-inch (M5)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_13-inch_M5",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 12.9-inch (6th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_12.9-inch_6",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 12.9-inch (5th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_12.9-inch_5",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 11-inch (3rd generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_11-inch_3",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 12.9-inch (4th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_12.9-inch_4",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 11-inch (4th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_11-inch_4",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 11-inch (2nd generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_11-inch_2",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 12.9-inch (3rd generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_12.9-inch_3",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 11-inch",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_11-inch",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro 12.9-inch (2nd generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_12.9-inch_2",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro (10.5-inch)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_10.5-inch",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Air 13-inch (M4)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_13-inch_M4",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro (9.7-inch)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_9.7-inch",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Pro (12.9-inch)",
+    "source": "https://www.ifixit.com/Device/iPad_Pro_12.9-inch",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Air 11-inch (M4)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_11-inch_M4",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Air 13-inch (M3)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_13-inch_M3",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Air (4th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_4",
+    "status": 200,
+    "matches": [
+      "ecifications == Platform CPU: A14 Bionic SoC Storage: 64/256 GB Storage options Display 10.9-inch (diagonal) LED-backlit Multi-Touch Retina IPS display 2360-by-1640 resolution at 264 pixels per inch (ppi) Wide color display (P3) True Tone display Fi"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPad Air (5th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_5",
+    "status": 200,
+    "matches": [
+      " Pencil (2nd generation) Processor: Apple M1 Chip 8-Core CPU 8-core graphics Apple Neural Engine 8 GB RAM Camera: Rear: 12MP Wide camera, ƒ/1.8 aperture Digital zoom up to 5x Five-element lens Autofocus with Focus Pixels Panorama (up to 63MP) Smart HDR 3 "
+    ],
+    "memory": [
+      "Core CPU 8-core graphics Apple Neural Engine 8 GB RAM Camera: Rear: 12MP Wide camera, ƒ/1.8 aperture Digital zoom up to 5x Five-eleme"
+    ]
+  },
+  {
+    "name": "iPad Air 2",
+    "source": "https://www.ifixit.com/Device/iPad_Air_2",
+    "status": 200,
+    "matches": [
+      "DR for photos and videos Processor: Triple-core 1.5 GHz Apple A8X chip with 64 bit architecture and M8 motion coprocessor RAM: 2 GB LPDDR3 Storage: 16, 64 and 128 GB flash memory Sensors: Touch ID Three-axis gyro Accelerometer Barometer Ambient light sens"
+    ],
+    "memory": [
+      "ith 64 bit architecture and M8 motion coprocessor RAM: 2 GB LPDDR3 Storage: 16, 64 and 128 GB flash memory Sensors: Touch ID Three-ax"
+    ]
+  },
+  {
+    "name": "iPad Air 11-inch (M2)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_11-inch_M2",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Air 11-inch (M3)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_11-inch_M3",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Air 13-inch (M2)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_13-inch_M2",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad Air",
+    "source": "https://www.ifixit.com/Device/iPad_Air",
+    "status": 200,
+    "matches": [
+      "del Number: A1474, A1475 Processor: Dual-core Apple A7 processor Storage: 16, 32, 64 and 128 GB flash memory Wireless: Integrated 802.11a/b/g/n and Bluetooth 4.0 Battery: Up to 10 hours of use Dimensions: 9.4 inches (240 mm) x 6.6 inches (169.5 mm) x 0.29"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPad Air (3rd generation)",
+    "source": "https://www.ifixit.com/Device/iPad_Air_3",
+    "status": 200,
+    "matches": [
+      "ecifications == Platform CPU: A12 Bionic SoC Storage: 64/256 GB Storage options Display 10.5-inch (diagonal) LED-backlit Multi-Touch Retina display 2224-by-1668 resolution at 264 pixels per inch (ppi) Wide color display (P3) True Tone display Finger"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPad mini (5th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_mini_5",
+    "status": 200,
+    "matches": [
+      "ecifications == Platform CPU: A12 Bionic SoC Storage: 64/256 GB Storage options Display 7.9-inch (diagonal) LED-backlit Multi-Touch Retina display 2048-by-1536 resolution at 326 pixels per inch (ppi) Wide color display (P3) True Tone display Fingerp"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPad mini 3",
+    "source": "https://www.ifixit.com/Device/iPad_mini_3",
+    "status": 200,
+    "matches": [
+      "stant oleophobic coating Processor: A7 chip with 64‑bit architecture with M7 motion coprocessor Resolution: 2048x1536 resolution at 326 ppi Storage: 16, 64 or 128 GB flash memory Wireless: Integrated 802.11n and Bluetooth 4.0 Battery: Built-in 23.8-watt-h"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPad mini 4",
+    "source": "https://www.ifixit.com/Device/iPad_mini_4",
+    "status": 200,
+    "matches": [
+      "stant oleophobic coating Processor: A8 chip with 64‑bit architecture with M8 motion coprocessor Resolution: 2048x1536 resolution at 326 ppi Storage: 16, 64 or 128 GB flash memory Wireless: Integrated 802.11a/​b/​g/​n/ac and Bluetooth 4.2 Battery: Built-in"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPad mini (6th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_mini_6",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A15 Bionic with 16-core Neural Engine 5 nm process 6-core CPU 5-core GPU RAM: 4 GB Storage: 64 or 256 GB Battery: 5034 mAh, 19.19 Wh Sensors: Touch ID Barometer Three-axis gyro Accelerometer Ambient light sensor Wireles"
+    ],
+    "memory": [
+      " Neural Engine 5 nm process 6-core CPU 5-core GPU RAM: 4 GB Storage: 64 or 256 GB Battery: 5034 mAh, 19.19 Wh Sensors: Touch ID Barom"
+    ]
+  },
+  {
+    "name": "iPad mini",
+    "source": "https://www.ifixit.com/Device/iPad_mini",
+    "status": 200,
+    "matches": [
+      "play with IPS technology Processor: Dual-core Apple A5 processor Resolution: 1024-by-768 resolution at 163 pixels per inch RAM: 512 MB Storage: 16, 32 or 64 GB flash memory Wireless: Integrated 802.11n and Bluetooth 4.0 Battery: Built-in 16.3-watt-hour re"
+    ],
+    "memory": [
+      "on: 1024-by-768 resolution at 163 pixels per inch RAM: 512 MB Storage: 16, 32 or 64 GB flash memory Wireless: Integrated 802.11n and "
+    ]
+  },
+  {
+    "name": "iPad mini 2",
+    "source": "https://www.ifixit.com/Device/iPad_mini_2",
+    "status": 200,
+    "matches": [
+      " 7.9-inch Retina Display Processor: Dual-core Apple A7 processor Resolution: 2048-by-1536 resolution at 326 pixels per inch Storage: 16, 32, 64 or 128 GB flash memory Wireless: Wi-Fi (802.11a/b/g/n); dual channel (2.4GHz and 5GHz) and MIMO, with Bluetooth"
+    ],
+    "memory": []
+  },
+  {
+    "name": "iPad (9th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_9",
+    "status": 200,
+    "matches": [
+      "p to 60 fps Retina Flash Processor: A13 Bionic with Neural Engine 7 nm process 6-core CPU 4-core GPU RAM: 3 GB Storage: 64 or 256 GB Battery: XXXX mAh, 32.4-watt-hour Sensors: Touch ID Barometer Three-axis gyro Accelerometer Ambient light sensor Wireless "
+    ],
+    "memory": [
+      " Neural Engine 7 nm process 6-core CPU 4-core GPU RAM: 3 GB Storage: 64 or 256 GB Battery: XXXX mAh, 32.4-watt-hour Sensors: Touch ID"
+    ]
+  },
+  {
+    "name": "iPad (8th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_8",
+    "status": 200,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad (7th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_7",
+    "status": 200,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad (10th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_10",
+    "status": 200,
+    "matches": [
+      "ina display w/ True Tone Processor: A14 Bionic Chip Rear Camera: 12 MP Wide Camera Front Camera: 12 MP Landscape Ultra Wide Front Camera Charging: USB-C Cellular: 5G Secure Authentication: Touch ID Max Storage: 256 GB Model numbers: A2696, A2757, A2777, A",
+      "Chipset: A14 Bionic Chip Processor: Hexa-Core (2 Performance Cores and 4 Efficiency Cores) Graphics: Quad-Core Neural Engine: 16-Core Processor RAM: 4 GB === Battery === Battery Life (On Wi-Fi): 10 Hours Battery Life (On Cellular): 9 Hours Charging: USB-C"
+    ],
+    "memory": [
+      "phics: Quad-Core Neural Engine: 16-Core Processor RAM: 4 GB === Battery === Battery Life (On Wi-Fi): 10 Hours Battery Life (On Cellul"
+    ]
+  },
+  {
+    "name": "iPad (6th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_6",
+    "status": 200,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad (5th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_5",
+    "status": 200,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad (4th generation)",
+    "source": "https://www.ifixit.com/Device/iPad_4",
+    "status": 200,
+    "matches": [
+      "e: 16, 32, 64, or 128 GB Processor: 1.4 GHz dual-core Apple Swift RAM: 1 GB Display Size: 9.7 inches Screen Resolution: 2048 x 1536 pixels Rear Camera: 5 MP Front Camera: 1.2 MP Battery: Li-Po battery, 11,560 mAh, 3.7 V == Troubleshooting == Diagnose and "
+    ],
+    "memory": [
+      "r 128 GB Processor: 1.4 GHz dual-core Apple Swift RAM: 1 GB Display Size: 9.7 inches Screen Resolution: 2048 x 1536 pixels Rear Camer"
+    ]
+  },
+  {
+    "name": "iPad mini (A17 Pro)",
+    "source": "https://www.ifixit.com/Device/iPad_mini_A17_Pro",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad (3rd generation)",
+    "source": "https://www.ifixit.com/Device/iPad_3",
+    "status": 200,
+    "matches": [
+      "tion: 1536 x 2048 pixels Processor: 1 GHz one-core RAM: 1 GB Operating System: iOS 5 Rear Camera: 5 MP Front Camera: 0.3 MP Battery Capacity: 11560 mAh Storage Capacity: 16, 32, or 64 GB Cameras: FaceTime and iSight cameras == Wallpapers == Check out our "
+    ],
+    "memory": [
+      "ion: 1536 x 2048 pixels Processor: 1 GHz one-core RAM: 1 GB Operating System: iOS 5 Rear Camera: 5 MP Front Camera: 0.3 MP Battery Ca"
+    ]
+  },
+  {
+    "name": "iPad (A16)",
+    "source": "https://www.ifixit.com/Device/iPad_A16",
+    "status": 404,
+    "matches": [],
+    "memory": []
+  },
+  {
+    "name": "iPad",
+    "source": "https://www.ifixit.com/Device/iPad_Wi-Fi",
+    "status": 200,
+    "matches": [
+      " a subsidiary of Foxconn Processor: 1 GHz Apple A4 system-on-a-chip Graphics: 1024×768 pixel (XGA resolution), 20cm × 15cm, 132ppi RAM: 256MB Storage: 16, 32 or 64 GB flash memory Wireless: Integrated 802.11n and Bluetooth 2.1 + EDR Battery: Built-in lith",
+      "rams == Chip IDs == Main processor: Apple A4 DRAM: Samsung K4X2 256MB Flash memory: Samsung K9LCG08U1M 8 GB NAND 802.11n WiFi + Bluetooth 2.1: Broadcom BCM4329XKUBG I/O controller: Broadcom BCM5973 Capacitive touchscreen controller: Broadcom BCM5974 Touch"
+    ],
+    "memory": [
+      "4×768 pixel (XGA resolution), 20cm × 15cm, 132ppi RAM: 256MB Storage: 16, 32 or 64 GB flash memory Wireless: Integrated 802.11n and B"
+    ]
+  },
+  {
+    "name": "iPad 2",
+    "source": "https://www.ifixit.com/Device/iPad_2_Wi-Fi_EMC_2415",
+    "status": 200,
+    "matches": [
+      " in-plane switching LCD, Processor: 1 GHz dual-core Apple A5 system-on-a-chip Graphics: 1024×768 pixel (XGA resolution), 20cm × 15cm, 132ppi RAM: 512MB Storage: 16, 32 or 64 GB flash memory Wireless: Integrated 802.11n and Bluetooth 2.1 + EDR Battery: Bui",
+      "rams == Chip IDs == Main processor: Apple A5 DRAM: Samsung 512MB RAM Flash memory: Toshiba TH58NVG7D2FLA89 16GB NAND Power management: Apple 343S0542 (Dialog Semi chip 802.11n WiFi + Bluetooth 2.1: BCM43291HKUBC I/O controller: Broadcom BCM5973 Capacitive"
+    ],
+    "memory": [
+      "4×768 pixel (XGA resolution), 20cm × 15cm, 132ppi RAM: 512MB Storage: 16, 32 or 64 GB flash memory Wireless: Integrated 802.11n and B",
+      "s == Main processor: Apple A5 DRAM: Samsung 512MB RAM Flash memory: Toshiba TH58NVG7D2FLA89 16GB NAND Power management: Apple 343S054"
+    ]
+  }
+]

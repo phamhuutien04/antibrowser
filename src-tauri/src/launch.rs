@@ -1,0 +1,1094 @@
+use crate::{
+    bookmarks, extensions,
+    process::{self, Tracker},
+    profile, proxy, settings, store,
+};
+use anyhow::{Context, Result};
+use std::path::{Path, PathBuf};
+use std::process::Stdio;
+
+/// Launch result: OS pid plus CDP endpoint when remote-debugging is on.
+pub struct LaunchOutcome {
+    pub pid: u32,
+    pub cdp: Option<process::CdpInfo>,
+    /// Why `cdp` is empty, so a client knows to poll rather than guess.
+    pub cdp_error: Option<String>,
+}
+
+/// Resolve the ShardX executable from settings, runtime cache, or dev guess.
+pub fn resolve_binary() -> Result<PathBuf> {
+    if let Some(p) = settings::load()?.browser_path {
+        let pb = PathBuf::from(p);
+        if pb.exists() {
+            return Ok(pb);
+        }
+    }
+    if let Ok(pb) = crate::runtime::binary_path() {
+        if pb.exists() {
+            return Ok(pb);
+        }
+    }
+    #[cfg(target_os = "macos")]
+    let guess = "/Applications/ShardX.app/Contents/MacOS/ShardX";
+    #[cfg(target_os = "windows")]
+    let guess = "C:\\Program Files\\ShardX\\ShardX.exe";
+    #[cfg(target_os = "linux")]
+    let guess = "/opt/shardx/shardx";
+    let pb = PathBuf::from(guess);
+    if pb.exists() {
+        return Ok(pb);
+    }
+    anyhow::bail!("ShardBrowser browser engine not installed yet — open Settings to download, or configure Browser path manually")
+}
+
+/// Why a launch is refused while the data lock (migrate.rs) is held.
+pub const LOCKED: &str = "ShardBrowser is moving or resetting its data. Try again when that finishes.";
+/// Why a launch that was under way stops short of starting the browser.
+pub const CANCELLED: &str = "launch cancelled: ShardBrowser is moving or resetting its data.";
+
+/// Launches between their first step and their browser being tracked.
+static LAUNCHING: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(0);
+
+/// Counts one launch from its first step to its return. Taken before the lock
+/// is checked, and the reset takes the lock before it reads the count (both
+/// SeqCst): a launch the reset does not see is one that then sees the lock.
+pub struct Launching(());
+
+impl Launching {
+    pub fn start() -> Self {
+        LAUNCHING.fetch_add(1, std::sync::atomic::Ordering::SeqCst);
+        Launching(())
+    }
+}
+
+impl Drop for Launching {
+    fn drop(&mut self) {
+        LAUNCHING.fetch_sub(1, std::sync::atomic::Ordering::SeqCst);
+    }
+}
+
+/// How many launches are under way (reset.rs refuses while any is).
+pub fn in_flight() -> usize {
+    LAUNCHING.load(std::sync::atomic::Ordering::SeqCst)
+}
+
+/// The last look before the browser starts: a launch that waited on the
+/// network while the lock was taken stops here, as cancelled; so does one the
+/// person cancelled (`launch_cancel`).
+fn may_spawn(profile_id: &str) -> Result<()> {
+    if crate::migrate::in_progress() {
+        anyhow::bail!("{CANCELLED}");
+    }
+    check_cancel(profile_id)
+}
+
+/// Why a launch the person cancelled ends: the UI tells it apart from a failure.
+pub const CANCELLED_BY_USER: &str = "launch cancelled";
+
+/// Profiles whose launch was cancelled while it was still on its way.
+static CANCELS: std::sync::Mutex<Vec<String>> = std::sync::Mutex::new(Vec::new());
+
+/// Cancel a launch that has not started its browser yet: the slow network
+/// steps finish their call, and the launch stops at the next look, at the
+/// latest just before the browser would start. A launch that already started
+/// its browser is past cancelling; the UI stops that one.
+pub fn cancel(profile_id: &str) {
+    if let Ok(mut c) = CANCELS.lock() {
+        if !c.iter().any(|p| p == profile_id) {
+            c.push(profile_id.to_string());
+        }
+    }
+}
+
+fn check_cancel(profile_id: &str) -> Result<()> {
+    let hit = CANCELS
+        .lock()
+        .map(|c| c.iter().any(|p| p == profile_id))
+        .unwrap_or(false);
+    if hit {
+        anyhow::bail!("{CANCELLED_BY_USER}");
+    }
+    Ok(())
+}
+
+/// Clears a profile's cancel when its launch starts and when it ends, however
+/// it ends: a cancel is for the launch that was on its way, never for the next
+/// one (a cancel that arrives just after a launch returned would otherwise
+/// stop the following one).
+struct CancelScope(String);
+
+impl CancelScope {
+    fn start(profile_id: &str) -> Self {
+        if let Ok(mut c) = CANCELS.lock() {
+            c.retain(|p| p != profile_id);
+        }
+        CancelScope(profile_id.to_string())
+    }
+}
+
+impl Drop for CancelScope {
+    fn drop(&mut self) {
+        if let Ok(mut c) = CANCELS.lock() {
+            c.retain(|p| *p != self.0);
+        }
+    }
+}
+
+/// Give a profile a `window` block when it claims a screen but names no window.
+///
+/// The engine turns `window.outer_*` into `--window-size`; with nothing to turn,
+/// Chromium sizes the window from the real monitor's work area and the result
+/// has no relation to the screen the profile claims. Shape follows the
+/// library's own desktop entries: the window fills the work area one pixel
+/// short, and the viewport is 87 px shorter again for the browser's chrome.
+/// Returns the block it derived, so the caller can also put it in the profile.
+fn fill_window_from_screen(
+    raw: &mut serde_json::Map<String, serde_json::Value>,
+) -> Option<serde_json::Value> {
+    let scr = raw.get("screen").and_then(|v| v.as_object())?;
+    let w = scr.get("width").and_then(|v| v.as_i64()).unwrap_or(0);
+    let h = scr.get("height").and_then(|v| v.as_i64()).unwrap_or(0);
+    if w <= 0 || h <= 0 {
+        return None;
+    }
+    let avail_w = scr.get("avail_width").and_then(|v| v.as_i64()).unwrap_or(w).max(1);
+    let avail_h = scr.get("avail_height").and_then(|v| v.as_i64()).unwrap_or(h).max(1);
+
+    // Only when it is missing or says nothing: a profile that names its own
+    // window was captured that way and is left exactly as it is.
+    if profile::names_a_window(raw) {
+        return None;
+    }
+
+    let mobile = profile::claims_mobile(raw);
+    let outer_h = if mobile { avail_h } else { (avail_h - 1).max(1) };
+    let mut win = serde_json::Map::new();
+    win.insert("outer_width".into(), serde_json::Value::from(avail_w));
+    win.insert("outer_height".into(), serde_json::Value::from(outer_h));
+    win.insert("inner_width".into(), serde_json::Value::from(avail_w));
+    win.insert("inner_height".into(), serde_json::Value::from(if mobile { outer_h } else { (outer_h - 87).max(1) }));
+    let win = serde_json::Value::Object(win);
+    raw.insert("window".into(), win.clone());
+    eprintln!(
+        "[launcher] display: profile named no window — derived {avail_w}x{outer_h} \
+         from its claimed {w}x{h} screen"
+    );
+    Some(win)
+}
+
+pub async fn launch_profile(
+    profile_id: &str,
+    enable_cdp: bool,
+    headless: bool,
+) -> Result<LaunchOutcome> {
+    launch_profile_synced(profile_id, enable_cdp, headless, None, 0, "").await
+}
+
+/// As `launch_profile`, but joins the browser to a synchronisation group:
+/// every profile launched under the same `sync_group` mirrors input.
+pub async fn launch_profile_synced(
+    profile_id: &str,
+    enable_cdp: bool,
+    headless: bool,
+    sync_group: Option<&str>,
+    bus_port: u16,
+    bus_token: &str,
+) -> Result<LaunchOutcome> {
+    // Counted from here to the return, before the slow network checks.
+    let _launching = Launching::start();
+    let _cancel_scope = CancelScope::start(profile_id);
+    // Every door (UI, local API, a run's own starts) comes through here:
+    // nothing starts while the data is being moved or reset.
+    if crate::migrate::in_progress() {
+        anyhow::bail!("{LOCKED}");
+    }
+    // One browser per profile: two children sharing a user-data dir corrupt each other's
+    // state, and the second displaces the first in the tracker, leaving it unstoppable.
+    if Tracker::shared().is_running(profile_id) {
+        anyhow::bail!("profile {profile_id} is already running");
+    }
+    let bin = resolve_binary()?;
+    let stored = profile::load_raw(profile_id)?;
+    let udd = profile::user_data_dir(profile_id)?;
+
+    // A browser left over from an earlier run of the launcher holds the
+    // profile's lock but is in nobody's tracker. Starting another one does
+    // not open a second window: Chromium's singleton hands the command line
+    // to the browser already there and the new process exits at once, so the
+    // profile looked like it refused to start while its window sat open on
+    // the desktop. Say what is actually happening instead.
+    if crate::reset::lock_is_live(&udd) {
+        anyhow::bail!(
+            "profile {profile_id} is already open in a browser this launcher did not start \
+             — close that window, then start it again"
+        );
+    }
+
+    // Stored proxy by id, else ephemeral inline (quick profiles, not in store).
+    let bound_proxy: Option<proxy::ProxyEntry> = stored
+        .meta
+        .proxy_id
+        .as_deref()
+        .and_then(|pid| proxy::get(pid).ok().flatten())
+        .or_else(|| stored.meta.inline_proxy.clone());
+
+    // Live UDP probe; QUIC/WebRTC gating uses current capability not stale cache.
+    let proxy_udp_ok = if let Some(p) = bound_proxy.as_ref() {
+        if matches!(p.kind, proxy::ProxyKind::Socks5) {
+            match proxy::probe_udp(p).await {
+                Ok(ms) => {
+                    eprintln!("[launcher] UDP relay OK ({ms} ms) for proxy {}", p.host);
+                    true
+                }
+                Err(e) => {
+                    // A failed probe does not mean the proxy has no relay. Some
+                    // VPNs pass UDP for one application and drop it for another,
+                    // and the launcher can be on the losing side while the
+                    // browser it starts is not — measured on a Mac where the
+                    // browser got STUN replies and a plain binary got none.
+                    // Treating that as "no UDP" took QUIC and proxied WebRTC
+                    // away from a browser that could have used both.
+                    if !proxy::can_send_udp_directly().await {
+                        crate::notify_warning(
+                            "This computer would not let the launcher send UDP, so \
+                             whether the proxy relays it could not be checked. The \
+                             browser is started with UDP left on — if it is a VPN \
+                             doing this, the browser may well be allowed where the \
+                             launcher is not.",
+                        );
+                        eprintln!(
+                            "[launcher] UDP probe failed for proxy {} ({e}), and this \
+                             process cannot send UDP at all — leaving UDP enabled",
+                            p.host
+                        );
+                        true
+                    } else {
+                        let cached = proxy::latest_test(&p.id).and_then(|s| s.udp_ms).is_some();
+                        eprintln!(
+                            "[launcher] UDP probe failed for proxy {} ({e}) while this \
+                             process CAN send UDP, so the proxy has no relay; cached={cached}",
+                            p.host
+                        );
+                        cached
+                    }
+                }
+            }
+        } else {
+            false
+        }
+    } else {
+        false
+    };
+
+    // "Real screen" is a global switch, and it exists for macOS profiles. A
+    // Win/Linux profile whose resolution the operator picked in the editor is
+    // left out of it, or the switch would report the host's screen over exactly
+    // the one they asked for.
+    let s = settings::load()?;
+    let use_real_screen =
+        s.screen_resolution_mode.as_deref() == Some("real") && !stored.meta.screen_custom
+        && !profile::claims_mobile(&stored.config);
+
+    // Strip `_meta` wrapper and resolve "auto" sentinels before serialising.
+    let mut raw = stored.config.clone();
+    raw.remove("_meta");
+    // Repair old iOS profiles whose template screen was previously clamped to
+    // the PC. Respect an explicit custom resolution and imported templates.
+    if profile::claims_ios(&raw) && !stored.meta.screen_custom {
+        if let Some(id) = stored.meta.gpu_preset_id.as_deref() {
+            if let Some(template) = crate::fingerprints::get(id)? {
+                for key in ["screen", "window"] {
+                    if let Some(value) = template.payload.get(key) {
+                        raw.insert(key.into(), value.clone());
+                    }
+                }
+            }
+        }
+    }
+    resolve_auto_fields(&mut raw, bound_proxy.as_ref()).await;
+    // The proxy probe and the geo lookup are the slow part: a cancel made
+    // while they ran stops here, before anything is written.
+    check_cancel(profile_id)?;
+
+    // A window to go with the claimed screen. Without one the engine passes no
+    // --window-size, and Chromium falls back to the REAL monitor's work area —
+    // a profile claiming 1920x1080 then opens in a window sized for the host
+    // and sitting outside its own claimed screen. Profiles saved before the
+    // editor wrote this block are missing it, so it is derived here.
+    if let Some(win) = fill_window_from_screen(&mut raw) {
+        // And kept: the block follows from the profile's own screen, nothing
+        // about this machine, so writing it back fixes the profile for good
+        // instead of re-deriving it on every start. Temporary profiles are
+        // deleted on close — there is nothing to fix. A failure here only
+        // costs the correction; this launch already has its window.
+        if !stored.meta.temporary && !crate::migrate::in_progress() {
+            match profile::fill_missing_window(profile_id, win) {
+                Ok(true) => eprintln!("[launcher] display: wrote the window block into the profile"),
+                Ok(false) => {}
+                Err(e) => eprintln!("[launcher] display: could not store the window block: {e}"),
+            }
+        }
+    }
+
+    // Whenever the profile's own screen is the one being used, it still has to
+    // fit this monitor: the editor offers only sizes the display can hold, but
+    // the profile may since have moved to a smaller machine, and a window
+    // cannot be bigger than the screen it opens on. A display that can hold the
+    // claim leaves it untouched, so this costs a hand-picked resolution nothing.
+    if !use_real_screen {
+        if let Some(w) = crate::main_window() {
+            crate::clamp_screen_to_real_display(&w, &mut raw);
+        }
+    }
+    let json = serde_json::to_string(&raw).context("serialize profile")?;
+
+    // Pass fingerprint by file path — inline JSON overflows Windows' 32767-char CreateProcess limit.
+    let fp_file = udd.join("fingerprint.json");
+    std::fs::write(&fp_file, &json).context("write fingerprint.json")?;
+
+    // Keep whatever CDM an engine has already fetched for itself, then hand it
+    // to this profile. The first profile to open a DRM page downloads one; every
+    // profile after that starts with it in place.
+    if let Err(e) = harvest_widevine(&udd) {
+        eprintln!("[launcher] widevine harvest skipped: {e}");
+    }
+    if let Err(e) = install_widevine(&udd) {
+        eprintln!("[launcher] widevine pre-warm skipped: {e}");
+    }
+
+    let mut cmd = tokio::process::Command::new(&bin);
+    cmd.arg(format!("--fingerprint-profile={}", fp_file.display()));
+    cmd.arg(format!("--user-data-dir={}", udd.display()));
+
+    // Per-profile window icon. A failure here is cosmetic, never fatal.
+    let color = stored.meta.color.clone().filter(|c| !c.trim().is_empty());
+    match crate::runtime::runtime_dir().and_then(|dir| {
+        // Display name lives in the config, not in _meta; id as fallback.
+        let name = stored
+            .config
+            .get("name")
+            .and_then(|v| v.as_str())
+            .filter(|s| !s.trim().is_empty())
+            .unwrap_or(profile_id);
+        crate::profile_icon::ensure_icon(&dir, name, color.as_deref())
+    }) {
+        Ok(path) => {
+            cmd.arg(format!("--shardx-profile-icon={}", path.display()));
+        }
+        Err(e) => {
+            eprintln!("[launcher] profile icon unavailable: {e:#}");
+        }
+    }
+    // Same accent behind the profile-name pill in the omnibox, so the icon and
+    // the window never disagree about a profile's colour. Left off for "auto":
+    // the pill then keeps the toolbar colour, which is the browser's own
+    // default and follows the theme.
+    if let Some(c) = color.as_deref() {
+        cmd.arg(format!("--shardx-profile-pill-color={c}"));
+    }
+    cmd.arg("--no-first-run");
+
+    // Extensions from the library. Chromium loads only what
+    // --disable-extensions-except allows, so the two lists have to match.
+    let ext_paths: Vec<String> = stored
+        .meta
+        .extensions
+        .iter()
+        .filter_map(|id| extensions::load_path(id))
+        .map(|p| p.display().to_string())
+        .collect();
+    if !ext_paths.is_empty() {
+        let joined = ext_paths.join(",");
+        cmd.arg(format!("--disable-extensions-except={joined}"));
+        cmd.arg(format!("--load-extension={joined}"));
+    }
+
+    // Folder bookmarks, written before the browser reads the file.
+    match bookmarks::apply_to_profile(&udd, &stored.meta.folder) {
+        Ok(n) if n > 0 => eprintln!("[launcher] {n} folder bookmark(s) applied"),
+        Ok(_) => {}
+        Err(e) => eprintln!("[launcher] bookmarks skipped: {e}"),
+    }
+
+    // Disable WebGPU when profile omits `webgpu` (matches real Linux Chrome).
+    let webgpu_present = raw
+        .get("webgpu")
+        .map(|v| !v.is_null())
+        .unwrap_or(false);
+    if !webgpu_present {
+        cmd.arg("--disable-features=WebGPU");
+    }
+
+    // Interactive launches: suppress the crash bubble. Restoring the session is
+    // the browser's own "On startup" setting — forcing it here overrode it.
+    if !headless && !enable_cdp {
+        cmd.arg("--hide-crash-restore-bubble");
+    }
+
+    if let Some(p) = bound_proxy.as_ref() {
+        cmd.arg(format!("--proxy-server={}", p.to_proxy_server_arg()));
+
+        // QUIC: enable only when proxy UDP relay verified; rely on Alt-Svc upgrade path.
+        if proxy_udp_ok {
+            cmd.arg("--enable-quic");
+            eprintln!(
+                "[launcher] QUIC enabled (Alt-Svc upgrade path): proxy {} UDP relay verified",
+                p.host
+            );
+        } else {
+            cmd.arg("--disable-quic");
+            eprintln!("[launcher] QUIC disabled: proxy {} has no working UDP relay", p.host);
+        }
+    }
+
+    // WebRTC IP policy: block / tcp_only / auto (auto = relay if UDP, else tcp_only).
+    let webrtc_mode = raw
+        .get("webrtc")
+        .and_then(|v| v.as_str())
+        .unwrap_or("auto");
+    let latest = bound_proxy
+        .as_ref()
+        .and_then(|p| proxy::latest_test(&p.id));
+    // Live geo for ICE-candidate spoofing, cached snapshot as fallback.
+    let proxy_public_ip: Option<String> = if let Some(p) = bound_proxy.as_ref() {
+        match proxy::geo_check(p, None).await {
+            Ok(g) if !g.ip.is_empty() => Some(g.ip),
+            _ => latest.as_ref().map(|s| s.ip.clone()).filter(|ip| !ip.is_empty()),
+        }
+    } else {
+        None
+    };
+    match webrtc_mode {
+        "block" => {
+            cmd.arg("--force-webrtc-ip-handling-policy=disable_non_proxied_udp");
+            cmd.arg("--shardx-webrtc-policy=block");
+            eprintln!("[launcher] WebRTC blocked (servers stripped, relay-only, UDP off)");
+        }
+        "tcp_only" => {
+            cmd.arg("--force-webrtc-ip-handling-policy=disable_non_proxied_udp");
+            cmd.arg("--shardx-webrtc-policy=tcp_only");
+            if let Some(ip) = proxy_public_ip.as_deref() {
+                cmd.arg(format!("--shardx-webrtc-public-ip={ip}"));
+            }
+            eprintln!("[launcher] WebRTC: TCP-only (servers stripped, mDNS host only, UDP off)");
+        }
+        _ => {
+            if bound_proxy.is_none() {
+                // No proxy bound — let WebRTC use the host network natively
+                // (real IP shows in ICE candidates, which is what the user wants
+                // when they explicitly didn't bind a proxy).
+                eprintln!("[launcher] WebRTC auto -> native (no proxy bound)");
+            } else if !proxy_udp_ok {
+                cmd.arg("--force-webrtc-ip-handling-policy=disable_non_proxied_udp");
+                cmd.arg("--shardx-webrtc-policy=tcp_only");
+                if let Some(ip) = proxy_public_ip.as_deref() {
+                    cmd.arg(format!("--shardx-webrtc-public-ip={ip}"));
+                }
+                eprintln!("[launcher] WebRTC auto -> TCP-only (no proxied UDP available)");
+            } else {
+                eprintln!("[launcher] WebRTC auto -> through proxy UDP relay");
+            }
+        }
+    }
+
+    // Screen resolution mode: presence-only switch to use host monitor. The
+    // setting is there for macOS profiles; a profile whose resolution the
+    // operator chose is left alone, or the switch would wipe exactly the
+    // screen they asked for.
+    if use_real_screen {
+        cmd.arg("--shardx-real-screen");
+    }
+
+    // The bus is the process's link to the launcher, not the group's — the page
+    // helper reports over it on launches that belong to no group at all.
+    if bus_port != 0 {
+        cmd.arg(format!("--shardx-bus=127.0.0.1:{bus_port}"));
+        cmd.arg(format!("--shardx-bus-token={bus_token}"));
+        cmd.arg(format!("--shardx-sync-profile={profile_id}"));
+    }
+    if let Some(group) = sync_group {
+        cmd.arg(format!("--shardx-sync-group={group}"));
+    }
+    if s.helper_enabled {
+        // In a group too: the fill travels as a command, not as input, so each
+        // window fills with its own generated person.
+        cmd.arg("--shardx-helper");
+    }
+    if s.camera_enabled {
+        // No value — the picture is chosen in the running browser. Without the
+        // switch the machine's own camera answers.
+        cmd.arg("--shardx-camera");
+    }
+
+    // CDP: port=0 makes Chrome pick free port and write DevToolsActivePort.
+    if enable_cdp {
+        let _ = std::fs::remove_file(udd.join("DevToolsActivePort"));
+        cmd.arg("--remote-debugging-port=0");
+        cmd.arg("--remote-allow-origins=*");
+        // Gates the Motion domain, which every automated click and keystroke goes
+        // through. Free when unused: it is absent from Schema.getDomains and /json/protocol.
+        cmd.arg("--shardx-automation");
+    }
+
+    if headless {
+        cmd.arg("--headless=new");
+    }
+
+    // Pin X11 (XWayland under Wayland): a Wayland client may not place its own windows,
+    // so SetBounds moves nothing. Not without DISPLAY — forcing x11 then opens no window.
+    #[cfg(target_os = "linux")]
+    {
+        let chosen = settings::parse_extra_args(&s.extra_args)
+            .iter()
+            .any(|a| a.starts_with("--ozone-platform"));
+        if !chosen && std::env::var_os("DISPLAY").is_some() {
+            cmd.arg("--ozone-platform=x11");
+        }
+    }
+
+    // Answer media questions the Android way. Gated on the profile claiming a phone
+    // as well as on the setting: the flag does nothing in the engine on a desktop one.
+    if stored.meta.android_media && profile::claims_mobile(&stored.config) {
+        cmd.arg("--shardx-android-media");
+    }
+
+    // Operator's own switches, last so they win a repeat.
+    for a in settings::parse_extra_args(&s.extra_args) {
+        cmd.arg(a);
+    }
+
+    cmd.stdout(Stdio::null()).stderr(Stdio::null());
+    #[cfg(target_os = "windows")]
+    {
+        use std::os::windows::process::CommandExt;
+        // 0x08000000 = CREATE_NO_WINDOW — suppress the brief console flash
+        // when a Tauri GUI app spawns the engine binary.
+        cmd.creation_flags(0x08000000);
+    }
+    may_spawn(profile_id)?;
+    let child = cmd.spawn().context("spawn ShardX")?;
+    let pid = Tracker::shared().track(profile_id.to_string(), child, stored.meta.temporary);
+
+    profile::touch_launched(profile_id, None)?;
+
+    let mut cdp_error = None;
+    let cdp = if enable_cdp {
+        match read_devtools_endpoint(&udd).await {
+            Some(c) => {
+                eprintln!("[launcher] CDP ready for {profile_id}: {}", c.web_socket_debugger_url);
+                Tracker::shared().set_cdp(profile_id, c.clone());
+                Some(c)
+            }
+            None => {
+                let msg = format!(
+                    "the browser did not report a debugging port within {}s; \
+                     read DevToolsActivePort in the profile's user-data dir, \
+                     or ask this endpoint again",
+                    CDP_WAIT.as_secs()
+                );
+                eprintln!("[launcher] CDP: {msg}");
+                cdp_error = Some(msg);
+                None
+            }
+        }
+    } else {
+        None
+    };
+
+    Ok(LaunchOutcome { pid, cdp, cdp_error })
+}
+
+/// How long a launch waits for the browser to publish its debugging port. Six
+/// seconds was not enough for a cold start on Windows with a large profile.
+const CDP_WAIT: std::time::Duration = std::time::Duration::from_secs(30);
+
+/// Poll `<udd>/DevToolsActivePort`; line 1 = port, line 2 = ws path.
+async fn read_devtools_endpoint(udd: &Path) -> Option<process::CdpInfo> {
+    let file = udd.join("DevToolsActivePort");
+    let deadline = std::time::Instant::now() + CDP_WAIT;
+    while std::time::Instant::now() < deadline {
+        if let Ok(txt) = std::fs::read_to_string(&file) {
+            let mut lines = txt.lines();
+            if let (Some(port_s), Some(path)) = (lines.next(), lines.next()) {
+                if let Ok(port) = port_s.trim().parse::<u16>() {
+                    return Some(process::CdpInfo {
+                        port,
+                        http_url: format!("http://127.0.0.1:{port}"),
+                        web_socket_debugger_url: format!(
+                            "ws://127.0.0.1:{port}{}",
+                            path.trim()
+                        ),
+                    });
+                }
+            }
+        }
+        tokio::time::sleep(std::time::Duration::from_millis(100)).await;
+    }
+    None
+}
+
+/// Resolve "auto" sentinels in profile JSON; with proxy: live → cached → country tag → host warn.
+async fn resolve_auto_fields(
+    cfg: &mut serde_json::Map<String, serde_json::Value>,
+    proxy_opt: Option<&proxy::ProxyEntry>,
+) {
+    let want_tz_auto = cfg.get("timezone").and_then(|v| v.as_str()) == Some("auto");
+    let want_lang_auto = cfg
+        .get("navigator")
+        .and_then(|n| n.get("language"))
+        .and_then(|v| v.as_str())
+        == Some("auto");
+    let want_geo_auto = matches!(
+        cfg.get("geolocation").and_then(|g| g.get("mode")).and_then(|v| v.as_str()),
+        Some("auto")
+    );
+
+    if !(want_tz_auto || want_lang_auto || want_geo_auto) {
+        return;
+    }
+
+    eprintln!(
+        "[launcher] resolving auto fields (tz={} lang={} geo={} proxy={})",
+        want_tz_auto,
+        want_lang_auto,
+        want_geo_auto,
+        proxy_opt.map(|p| format!("{}:{}", p.host, p.port)).unwrap_or_else(|| "(direct)".into()),
+    );
+
+    // ---- geo source ----
+    let mut source = "";
+    let geo: Option<proxy::GeoInfo> = match proxy_opt {
+        Some(p) => {
+            match proxy::geo_check_via(Some(p), None).await {
+                Ok(g) => { source = "proxy-live"; Some(g) }
+                Err(e) => {
+                    eprintln!("[launcher] proxy geo failed: {e} — falling back to cached snapshot");
+                    if let Some(snap) = proxy::latest_test(&p.id) {
+                        if !snap.country_code.is_empty() || !snap.timezone.is_empty() {
+                            source = "cached-snapshot";
+                            Some(proxy::GeoInfo {
+                                ip: snap.ip,
+                                country: snap.country,
+                                country_code: snap.country_code,
+                                region: snap.region,
+                                city: snap.city,
+                                isp: snap.isp,
+                                timezone: snap.timezone,
+                                latitude: snap.latitude,
+                                longitude: snap.longitude,
+                                provider: snap.provider,
+                            })
+                        } else { None }
+                    } else { None }
+                    .or_else(|| {
+                        if !p.country.is_empty() {
+                            source = "country-tag";
+                            Some(proxy::GeoInfo {
+                                ip: String::new(),
+                                country: String::new(),
+                                country_code: p.country.clone(),
+                                region: String::new(),
+                                city: String::new(),
+                                isp: String::new(),
+                                timezone: String::new(),
+                                latitude: 0.0,
+                                longitude: 0.0,
+                                provider: String::new(),
+                            })
+                        } else { None }
+                    })
+                }
+            }
+        }
+        None => {
+            match proxy::geo_check_via(None, None).await {
+                Ok(g) => { source = "direct-live"; Some(g) }
+                Err(e) => {
+                    eprintln!("[launcher] direct geo failed: {e} — falling back to host TZ/locale");
+                    None
+                }
+            }
+        }
+    };
+
+    let host_warn = || {
+        if proxy_opt.is_some() {
+            crate::notify_warning(
+                "Could not read the proxy's location. Rather than hand a page \
+                 this computer's timezone, the profile starts on UTC — which \
+                 few people really keep. Test the proxy again, or set the \
+                 timezone on the profile yourself.",
+            );
+        }
+    };
+
+    // ---- concrete tz/locale/lat/lng ----
+    let (resolved_tz, resolved_locale, resolved_lat, resolved_lng) = match geo {
+        Some(ref g) => {
+            let tz = if !g.timezone.is_empty() {
+                g.timezone.clone()
+            } else {
+                proxy::country_to_timezone(&g.country_code).to_string()
+            };
+            let locale = proxy::country_to_locale(&g.country_code).to_string();
+            let lat = if g.latitude != 0.0 { Some(g.latitude) } else { None };
+            let lng = if g.longitude != 0.0 { Some(g.longitude) } else { None };
+            (tz, locale, lat, lng)
+        }
+        None => {
+            host_warn();
+            if proxy_opt.is_some() {
+                // A profile behind a proxy must never answer with this
+                // computer's clock. Before, the Windows branch had no way to
+                // read the host zone and landed on UTC by accident; now that
+                // it can read it, handing it over would be a real leak of
+                // where the operator is. UTC is wrong too, but it is not
+                // anybody's address.
+                ("UTC".into(), "en-US".into(), None, None)
+            } else {
+                (
+                    host_timezone().unwrap_or_else(|| "UTC".into()),
+                    host_locale().unwrap_or_else(|| "en-US".into()),
+                    None,
+                    None,
+                )
+            }
+        }
+    };
+
+    eprintln!(
+        "[launcher] resolved tz={resolved_tz} locale={resolved_locale} (source={source})"
+    );
+
+    if want_tz_auto {
+        cfg.insert("timezone".into(), serde_json::Value::String(resolved_tz.clone()));
+    }
+
+    if want_lang_auto {
+        let base = resolved_locale.split('-').next().unwrap_or(&resolved_locale).to_string();
+        let accept = if resolved_locale == "en-US" {
+            "en-US,en;q=0.9".to_string()
+        } else {
+            format!("{resolved_locale},{base};q=0.9,en-US;q=0.8,en;q=0.7")
+        };
+        let languages = if resolved_locale == "en-US" {
+            vec![
+                serde_json::Value::String("en-US".into()),
+                serde_json::Value::String("en".into()),
+            ]
+        } else {
+            vec![
+                serde_json::Value::String(resolved_locale.clone()),
+                serde_json::Value::String(base),
+                serde_json::Value::String("en-US".into()),
+                serde_json::Value::String("en".into()),
+            ]
+        };
+        if let Some(nav) = cfg.get_mut("navigator").and_then(|v| v.as_object_mut()) {
+            nav.insert("language".into(), serde_json::Value::String(resolved_locale.clone()));
+            nav.insert("accept_language".into(), serde_json::Value::String(accept));
+            nav.insert("languages".into(), serde_json::Value::Array(languages));
+        }
+        // Always overwrite icu_locale so it matches resolved navigator.language.
+        cfg.insert("icu_locale".into(), serde_json::Value::String(resolved_locale));
+    }
+
+    if want_geo_auto {
+        if let (Some(lat), Some(lng)) = (resolved_lat, resolved_lng) {
+            cfg.insert(
+                "geolocation".into(),
+                serde_json::json!({
+                    "mode": "manual",
+                    "latitude": lat,
+                    "longitude": lng,
+                    "accuracy": 50.0,
+                }),
+            );
+        } else {
+            cfg.remove("geolocation");
+        }
+    }
+}
+
+/// Version string as numbers, so "4.10.2891.0" sorts above "4.9.9999.0".
+fn cdm_version(v: &str) -> Vec<u64> {
+    v.split('.').map(|p| p.parse().unwrap_or(0)).collect()
+}
+
+fn cdm_version_of(dir: &Path) -> Option<String> {
+    let text = std::fs::read_to_string(dir.join("manifest.json")).ok()?;
+    let manifest: serde_json::Value = serde_json::from_str(&text).ok()?;
+    manifest.get("version")?.as_str().map(String::from)
+}
+
+/// Take the CDM the engine downloaded for itself into the cache, so the next
+/// profile does not have to download its own. The engine's component updater is
+/// the only thing that writes `<udd>/WidevineCdm/<version>/`, and it keeps that
+/// copy current — which is why the CDM is not shipped from the CDN at all: its
+/// version would have to be chased there forever.
+fn harvest_widevine(udd: &Path) -> Result<()> {
+    let root = udd.join("WidevineCdm");
+    if !root.exists() {
+        return Ok(());
+    }
+    let mut newest: Option<(Vec<u64>, String, PathBuf)> = None;
+    for entry in std::fs::read_dir(&root)?.flatten() {
+        let p = entry.path();
+        if !p.is_dir() {
+            continue;
+        }
+        let Some(version) = cdm_version_of(&p) else { continue };
+        let parsed = cdm_version(&version);
+        if newest.as_ref().is_none_or(|(best, _, _)| parsed > *best) {
+            newest = Some((parsed, version, p));
+        }
+    }
+    let Some((found, version, src)) = newest else { return Ok(()) };
+
+    let cache = store::widevine_cache_dir()?;
+    if let Some(have) = cdm_version_of(&cache) {
+        if cdm_version(&have) >= found {
+            return Ok(());
+        }
+    }
+    // Into a sibling first: a half-copied cache is worse than none, because
+    // install_widevine reads it without knowing it is unfinished.
+    let staging = cache.with_extension("incoming");
+    let _ = std::fs::remove_dir_all(&staging);
+    copy_dir_recursive(&src, &staging)?;
+    let _ = std::fs::remove_dir_all(&cache);
+    std::fs::rename(&staging, &cache)?;
+    eprintln!("[launcher] widevine cached from a profile: {version}");
+    Ok(())
+}
+
+/// Copy cached Widevine CDM into `<udd>/WidevineCdm/<version>/` (versioned layout
+/// required by Chromium's DefaultComponentInstaller). No-op if cache absent.
+fn install_widevine(udd: &Path) -> Result<()> {
+    let src = store::widevine_cache_dir()?;
+    if !src.exists() {
+        anyhow::bail!("cache dir absent ({})", src.display());
+    }
+    let manifest_path = src.join("manifest.json");
+    if !manifest_path.exists() {
+        anyhow::bail!("cache missing manifest.json — re-seed from a real Chrome");
+    }
+    let manifest_text = std::fs::read_to_string(&manifest_path)?;
+    let manifest: serde_json::Value = serde_json::from_str(&manifest_text)
+        .context("parse widevine manifest.json")?;
+    let version = manifest
+        .get("version")
+        .and_then(|v| v.as_str())
+        .ok_or_else(|| anyhow::anyhow!("widevine manifest missing `version`"))?;
+
+    let widevine_root = udd.join("WidevineCdm");
+    let versioned = widevine_root.join(version);
+    if versioned.exists() {
+        return Ok(());
+    }
+    // Clean up any stale flat layout from older launcher versions.
+    let flat_manifest = widevine_root.join("manifest.json");
+    if flat_manifest.exists() {
+        for stray in ["manifest.json", "LICENSE", "_platform_specific"] {
+            let p = widevine_root.join(stray);
+            if p.is_dir() {
+                let _ = std::fs::remove_dir_all(&p);
+            } else if p.exists() {
+                let _ = std::fs::remove_file(&p);
+            }
+        }
+    }
+    copy_dir_recursive(&src, &versioned).with_context(|| {
+        format!("copy {} → {}", src.display(), versioned.display())
+    })?;
+    // Chromium reads this single-line marker on startup.
+    std::fs::write(
+        widevine_root.join("latest-component-updated-version"),
+        version,
+    )?;
+    eprintln!("[launcher] widevine pre-warmed: {}", versioned.display());
+    Ok(())
+}
+
+fn copy_dir_recursive(src: &Path, dst: &Path) -> Result<()> {
+    std::fs::create_dir_all(dst)?;
+    for entry in std::fs::read_dir(src)? {
+        let entry = entry?;
+        let from = entry.path();
+        let to = dst.join(entry.file_name());
+        let ty = entry.file_type()?;
+        if ty.is_dir() {
+            copy_dir_recursive(&from, &to)?;
+        } else if ty.is_symlink() {
+            // Resolve symlinks so dst tree stays portable across hosts.
+            let target = std::fs::read_link(&from)?;
+            let resolved = if target.is_absolute() { target } else { from.parent().unwrap().join(target) };
+            if resolved.is_dir() {
+                copy_dir_recursive(&resolved, &to)?;
+            } else {
+                std::fs::copy(&resolved, &to)?;
+            }
+        } else {
+            std::fs::copy(&from, &to)?;
+        }
+    }
+    Ok(())
+}
+
+/// Read host TZ from /etc/localtime symlink, fall back to $TZ.
+fn host_timezone() -> Option<String> {
+    if let Ok(target) = std::fs::read_link("/etc/localtime") {
+        let path = target.to_string_lossy().into_owned();
+        for prefix in ["/usr/share/zoneinfo/", "/var/db/timezone/zoneinfo/"] {
+            if let Some(tz) = path.strip_prefix(prefix) {
+                return Some(tz.to_string());
+            }
+        }
+    }
+    if let Ok(tz) = std::env::var("TZ") {
+        if !tz.is_empty() {
+            return Some(tz);
+        }
+    }
+    // Windows has neither of the above, and answering "UTC" there put every
+    // profile on a clock almost nobody really keeps.
+    iana_time_zone::get_timezone().ok().filter(|s| !s.is_empty())
+}
+
+/// Extract BCP-47 locale from $LANG/$LC_ALL ("en_US.UTF-8" → "en-US").
+fn host_locale() -> Option<String> {
+    for var in ["LANG", "LC_ALL", "LC_MESSAGES"] {
+        if let Ok(v) = std::env::var(var) {
+            let stripped = v.split('.').next().unwrap_or("").replace('_', "-");
+            if stripped.contains('-') {
+                return Some(stripped);
+            }
+        }
+    }
+    None
+}
+
+#[cfg(test)]
+mod tests {
+    use super::fill_window_from_screen;
+    use serde_json::json;
+
+    /// I4: the local API and a run start profiles through here, not through
+    /// the UI's own check, so the lock is checked here.
+    #[tokio::test]
+    async fn nothing_starts_while_the_data_lock_is_held() {
+        let _serial = crate::migrate::serial();
+        assert!(crate::migrate::hold());
+        let plain = super::launch_profile("any", true, false).await;
+        let synced = super::launch_profile_synced("any", false, false, Some("g"), 0, "").await;
+        crate::migrate::release();
+        for r in [plain, synced] {
+            assert_eq!(r.err().map(|e| e.to_string()).as_deref(), Some(super::LOCKED));
+        }
+    }
+
+    /// I-1: a launch counts from its first step, and stops short of the spawn
+    /// when the lock was taken while it waited on the network.
+    #[test]
+    fn a_cancel_stops_only_the_launch_it_was_made_for() {
+        let id = "cancel-test-profile";
+        let scope = super::CancelScope::start(id);
+        assert!(super::check_cancel(id).is_ok());
+        super::cancel(id);
+        assert_eq!(super::check_cancel(id).err().map(|e| e.to_string()).as_deref(), Some(super::CANCELLED_BY_USER));
+        drop(scope);
+        // Late, after that launch returned: the next launch starts clean.
+        super::cancel(id);
+        let _next = super::CancelScope::start(id);
+        assert!(super::check_cancel(id).is_ok());
+    }
+
+    #[test]
+    fn a_launch_under_way_is_counted_and_stops_before_the_spawn() {
+        let _serial = crate::migrate::serial();
+        let before = super::in_flight();
+        let launching = super::Launching::start();
+        assert_eq!(super::in_flight(), before + 1);
+        assert!(super::may_spawn("not-a-profile").is_ok());
+        assert!(crate::migrate::hold());
+        let stopped = super::may_spawn("not-a-profile").err().map(|e| e.to_string());
+        crate::migrate::release();
+        drop(launching);
+        assert_eq!(stopped.as_deref(), Some(super::CANCELLED));
+        assert_eq!(super::in_flight(), before);
+    }
+
+    fn obj(v: serde_json::Value) -> serde_json::Map<String, serde_json::Value> {
+        v.as_object().unwrap().clone()
+    }
+
+    #[test]
+    fn mobile_window_keeps_the_full_virtual_viewport() {
+        for platform in ["iOS", "Android"] {
+            let mut raw = obj(json!({
+                "client_hints": {"platform": platform, "mobile": true},
+                "screen": {"width": 1024, "height": 1366, "device_pixel_ratio": 2}
+            }));
+            fill_window_from_screen(&mut raw);
+            assert_eq!(raw["window"]["inner_width"], 1024);
+            assert_eq!(raw["window"]["inner_height"], 1366);
+            assert_eq!(raw["screen"]["device_pixel_ratio"], 2);
+        }
+    }
+
+    #[test]
+    fn derives_a_window_from_the_claimed_screen() {
+        let mut raw = obj(json!({
+            "screen": { "width": 1920, "height": 1080,
+                        "avail_width": 1920, "avail_height": 1032 }
+        }));
+        fill_window_from_screen(&mut raw);
+        let w = raw["window"].as_object().unwrap();
+        assert_eq!(w["outer_width"], 1920);
+        assert_eq!(w["outer_height"], 1031);
+        assert_eq!(w["inner_width"], 1920);
+        assert_eq!(w["inner_height"], 944);
+    }
+
+    #[test]
+    fn leaves_a_profile_that_names_its_own_window() {
+        let mut raw = obj(json!({
+            "screen": { "width": 1920, "height": 1080,
+                        "avail_width": 1920, "avail_height": 1032 },
+            "window": { "outer_width": 1280, "outer_height": 800,
+                        "inner_width": 1280, "inner_height": 713 }
+        }));
+        fill_window_from_screen(&mut raw);
+        let w = raw["window"].as_object().unwrap();
+        assert_eq!(w["outer_width"], 1280, "a captured window must survive");
+        assert_eq!(w["inner_height"], 713);
+    }
+
+    #[test]
+    fn falls_back_to_the_full_screen_when_avail_is_absent() {
+        let mut raw = obj(json!({ "screen": { "width": 1366, "height": 768 } }));
+        fill_window_from_screen(&mut raw);
+        let w = raw["window"].as_object().unwrap();
+        assert_eq!(w["outer_width"], 1366);
+        assert_eq!(w["outer_height"], 767);
+    }
+
+    #[test]
+    fn does_nothing_without_a_screen() {
+        let mut raw = obj(json!({ "name": "no screen here" }));
+        fill_window_from_screen(&mut raw);
+        assert!(raw.get("window").is_none());
+    }
+
+    #[test]
+    fn an_empty_window_block_is_still_filled() {
+        let mut raw = obj(json!({
+            "screen": { "width": 1600, "height": 900, "avail_width": 1600, "avail_height": 860 },
+            "window": {}
+        }));
+        fill_window_from_screen(&mut raw);
+        let w = raw["window"].as_object().unwrap();
+        assert_eq!(w["outer_width"], 1600);
+        assert_eq!(w["outer_height"], 859);
+    }
+}

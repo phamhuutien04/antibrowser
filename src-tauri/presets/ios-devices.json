@@ -1,0 +1,4358 @@
+[
+  {
+    "id": "ios-iphone-duo",
+    "name": "iPhone Duo",
+    "platform": "iPhone",
+    "width": 626,
+    "height": 890,
+    "dpr": 3,
+    "physical_width": 1878,
+    "physical_height": 2670,
+    "chip": "A20 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      7
+    ],
+    "memory_gb_variants": [
+      12
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/148588",
+    "chip_source": "https://support.apple.com/en-us/148588",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": "Màn hình trong; chưa có phép đo viewport khi gập/mở",
+    "evidence": {
+      "chip": "A20 Pro chip 6-core CPU with 2 super cores and 4 efficiency cores 7-core GPU with Neural Accelerators Dual 16-core Neural Engine Hardware-accelerated ray tracing Camera 48MP Dual Fusion camera system 48MP Fusion Main: 26",
+      "display": "1878-by-2670-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_Duo",
+    "hardware_gpu": "A20 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/148588",
+      "https://www.ifixit.com/Device/iPhone_Duo"
+    ]
+  },
+  {
+    "id": "ios-iphone-18-pro-max",
+    "name": "iPhone 18 Pro Max",
+    "platform": "iPhone",
+    "width": 440,
+    "height": 956,
+    "dpr": 3,
+    "physical_width": 1320,
+    "physical_height": 2868,
+    "chip": "A20 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      7
+    ],
+    "memory_gb_variants": [
+      12
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/148591",
+    "chip_source": "https://support.apple.com/en-us/148591",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A20 Pro chip 6-core CPU with 2 super cores and 4 efficiency cores 7-core GPU with Neural Accelerators Dual 16-core Neural Engine Hardware-accelerated ray tracing Camera 48MP Pro Fusion camera system 48MP Fusion Main with",
+      "display": "2868-by-1320-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_18_Pro_Max",
+    "hardware_gpu": "A20 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/148591",
+      "https://www.ifixit.com/Device/iPhone_18_Pro_Max"
+    ]
+  },
+  {
+    "id": "ios-iphone-18-pro",
+    "name": "iPhone 18 Pro",
+    "platform": "iPhone",
+    "width": 402,
+    "height": 874,
+    "dpr": 3,
+    "physical_width": 1206,
+    "physical_height": 2622,
+    "chip": "A20 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      7
+    ],
+    "memory_gb_variants": [
+      12
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/148590",
+    "chip_source": "https://support.apple.com/en-us/148590",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A20 Pro chip 6-core CPU with 2 super cores and 4 efficiency cores 7-core GPU with Neural Accelerators Dual 16-core Neural Engine Hardware-accelerated ray tracing Camera 48MP Pro Fusion camera system 48MP Fusion Main with",
+      "display": "2622-by-1206-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_18_Pro",
+    "hardware_gpu": "A20 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/148590",
+      "https://www.ifixit.com/Device/iPhone_18_Pro"
+    ]
+  },
+  {
+    "id": "ios-iphone-17e",
+    "name": "iPhone 17e",
+    "platform": "iPhone",
+    "width": 390,
+    "height": 844,
+    "dpr": 3,
+    "physical_width": 1170,
+    "physical_height": 2532,
+    "chip": "A19",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/126470",
+    "chip_source": "https://support.apple.com/en-us/126470",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A19 chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU with Neural Accelerators 16-core Neural Engine Hardware-accelerated ray tracing Camera 48MP Fusion camera system 48MP Fusion Main: 26 mm, &fnof;/1.",
+      "display": "2532-by-1170-pixel resolution"
+    },
+    "memory_source": "https://techinsights.com/blog/apple-iphone-17e-teardown-a19-processor-sk-hynix-memory-bom-analysis",
+    "hardware_gpu": "A19 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/126470",
+      "https://techinsights.com/blog/apple-iphone-17e-teardown-a19-processor-sk-hynix-memory-bom-analysis",
+      "https://www.ifixit.com/Device/iPhone_17e"
+    ]
+  },
+  {
+    "id": "ios-iphone-17-pro-max",
+    "name": "iPhone 17 Pro Max",
+    "platform": "iPhone",
+    "width": 440,
+    "height": 956,
+    "dpr": 3,
+    "physical_width": 1320,
+    "physical_height": 2868,
+    "chip": "A19 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      12
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/125091",
+    "chip_source": "https://support.apple.com/en-us/125091",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A19 Pro chip 6-core CPU with 2 performance and 4 efficiency cores 6-core GPU with Neural Accelerators 16-core Neural Engine Hardware-accelerated ray tracing Camera 48MP Pro Fusion camera system 48MP Fusion Main: 24 mm, &",
+      "display": "2868-by-1320-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Teardown/iPhone+17+Pro+Chip+ID/196117",
+    "hardware_gpu": "A19 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/125091",
+      "https://www.ifixit.com/Teardown/iPhone+17+Pro+Chip+ID/196117",
+      "https://www.ifixit.com/Device/iPhone_17_Pro_Max"
+    ]
+  },
+  {
+    "id": "ios-iphone-17-pro",
+    "name": "iPhone 17 Pro",
+    "platform": "iPhone",
+    "width": 402,
+    "height": 874,
+    "dpr": 3,
+    "physical_width": 1206,
+    "physical_height": 2622,
+    "chip": "A19 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      12
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/125090",
+    "chip_source": "https://support.apple.com/en-us/125090",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A19 Pro chip 6-core CPU with 2 performance and 4 efficiency cores 6-core GPU with Neural Accelerators 16-core Neural Engine Hardware-accelerated ray tracing Camera 48MP Pro Fusion camera system 48MP Fusion Main: 24 mm, &",
+      "display": "2622-by-1206-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_17_Pro",
+    "hardware_gpu": "A19 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/125090",
+      "https://www.ifixit.com/Device/iPhone_17_Pro"
+    ]
+  },
+  {
+    "id": "ios-iphone-17",
+    "name": "iPhone 17",
+    "platform": "iPhone",
+    "width": 402,
+    "height": 874,
+    "dpr": 3,
+    "physical_width": 1206,
+    "physical_height": 2622,
+    "chip": "A19",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/125089",
+    "chip_source": "https://support.apple.com/en-us/125089",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A19 chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU with Neural Accelerators 16-core Neural Engine Hardware-accelerated ray tracing Camera 48MP Dual Fusion camera system 48MP Fusion Main: 26 mm, &fno",
+      "display": "2622-by-1206-pixel resolution"
+    },
+    "memory_source": "https://arstechnica.com/gadgets/2025/09/review-apples-injects-just-the-right-amount-of-pro-into-the-regular-iphone-17/",
+    "hardware_gpu": "A19 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/125089",
+      "https://arstechnica.com/gadgets/2025/09/review-apples-injects-just-the-right-amount-of-pro-into-the-regular-iphone-17/",
+      "https://www.ifixit.com/Device/iPhone_17"
+    ]
+  },
+  {
+    "id": "ios-iphone-air",
+    "name": "iPhone Air",
+    "platform": "iPhone",
+    "width": 420,
+    "height": 912,
+    "dpr": 3,
+    "physical_width": 1260,
+    "physical_height": 2736,
+    "chip": "A19 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      12
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/125092",
+    "chip_source": "https://support.apple.com/en-us/125092",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A19 Pro chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU with Neural Accelerators 16-core Neural Engine Hardware-accelerated ray tracing Camera 48MP Fusion camera system 48MP Fusion Main: 26 mm, &fnof",
+      "display": "2736-by-1260-pixel resolution"
+    },
+    "memory_source": "https://arstechnica.com/gadgets/2025/09/review-apples-injects-just-the-right-amount-of-pro-into-the-regular-iphone-17/",
+    "hardware_gpu": "A19 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/125092",
+      "https://arstechnica.com/gadgets/2025/09/review-apples-injects-just-the-right-amount-of-pro-into-the-regular-iphone-17/",
+      "https://www.ifixit.com/Device/iPhone_Air"
+    ]
+  },
+  {
+    "id": "ios-iphone-16e",
+    "name": "iPhone 16e",
+    "platform": "iPhone",
+    "width": 390,
+    "height": 844,
+    "dpr": 3,
+    "physical_width": 1170,
+    "physical_height": 2532,
+    "chip": "A18",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/122208",
+    "chip_source": "https://support.apple.com/en-us/122208",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A18 chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU 16-core Neural Engine Hardware-accelerated ray tracing Camera 2-in-1 camera system 48MP Fusion Main: 26 mm, &fnof;/1.6 aperture, optical image stab",
+      "display": "2532-by-1170-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_16e",
+    "hardware_gpu": "A18 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/122208",
+      "https://www.ifixit.com/Device/iPhone_16e"
+    ]
+  },
+  {
+    "id": "ios-iphone-16-pro-max",
+    "name": "iPhone 16 Pro Max",
+    "platform": "iPhone",
+    "width": 440,
+    "height": 956,
+    "dpr": 3,
+    "physical_width": 1320,
+    "physical_height": 2868,
+    "chip": "A18 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/121032",
+    "chip_source": "https://support.apple.com/en-us/121032",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A18 Pro chip New 6-core CPU with 2 performance and 4 efficiency cores New 6-core GPU New 16-core Neural Engine Camera Pro camera system 48MP Fusion: 24 mm, &fnof;/1.78 aperture, second-generation sensor-shift optical ima",
+      "display": "2868-by-1320-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_16_Pro_Max",
+    "hardware_gpu": "A18 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/121032",
+      "https://www.ifixit.com/Device/iPhone_16_Pro_Max"
+    ]
+  },
+  {
+    "id": "ios-iphone-16-pro",
+    "name": "iPhone 16 Pro",
+    "platform": "iPhone",
+    "width": 402,
+    "height": 874,
+    "dpr": 3,
+    "physical_width": 1206,
+    "physical_height": 2622,
+    "chip": "A18 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/121031",
+    "chip_source": "https://support.apple.com/en-us/121031",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A18 Pro chip New 6-core CPU with 2 performance and 4 efficiency cores New 6-core GPU New 16-core Neural Engine Camera Pro camera system 48MP Fusion: 24 mm, &fnof;/1.78 aperture, second-generation sensor-shift optical ima",
+      "display": "2622-by-1206-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_16_Pro",
+    "hardware_gpu": "A18 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/121031",
+      "https://www.ifixit.com/Device/iPhone_16_Pro"
+    ]
+  },
+  {
+    "id": "ios-iphone-16-plus",
+    "name": "iPhone 16 Plus",
+    "platform": "iPhone",
+    "width": 430,
+    "height": 932,
+    "dpr": 3,
+    "physical_width": 1290,
+    "physical_height": 2796,
+    "chip": "A18",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/121030",
+    "chip_source": "https://support.apple.com/en-us/121030",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A18 chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera Advanced dual-camera system 48MP Fusion Main: 26 mm, &fnof;/1.6 aperture, sensor-shift optical image stabilization, 10",
+      "display": "2796-by-1290-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_16_Plus",
+    "hardware_gpu": "A18 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/121030",
+      "https://www.ifixit.com/Device/iPhone_16_Plus"
+    ]
+  },
+  {
+    "id": "ios-iphone-16",
+    "name": "iPhone 16",
+    "platform": "iPhone",
+    "width": 393,
+    "height": 852,
+    "dpr": 3,
+    "physical_width": 1179,
+    "physical_height": 2556,
+    "chip": "A18",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/121029",
+    "chip_source": "https://support.apple.com/en-us/121029",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A18 chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera Advanced dual-camera system 48MP Fusion Main: 26 mm, &fnof;/1.6 aperture, sensor-shift optical image stabilization, 10",
+      "display": "2556-by-1179-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_16",
+    "hardware_gpu": "A18 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/121029",
+      "https://www.ifixit.com/Device/iPhone_16"
+    ]
+  },
+  {
+    "id": "ios-iphone-15-pro-max",
+    "name": "iPhone 15 Pro Max",
+    "platform": "iPhone",
+    "width": 430,
+    "height": 932,
+    "dpr": 3,
+    "physical_width": 1290,
+    "physical_height": 2796,
+    "chip": "A17 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111828",
+    "chip_source": "https://support.apple.com/en-us/111828",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A17 Pro chip New 6-core CPU with 2 performance and 4 efficiency cores New 6-core GPU New 16-core Neural Engine Camera Pro camera system 48MP Main: 24 mm, &fnof;/1.78 aperture, second-generation sensor-shift optical image",
+      "display": "2796-by-1290-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_15_Pro_Max",
+    "hardware_gpu": "A17 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111828",
+      "https://www.ifixit.com/Device/iPhone_15_Pro_Max"
+    ]
+  },
+  {
+    "id": "ios-iphone-15-pro",
+    "name": "iPhone 15 Pro",
+    "platform": "iPhone",
+    "width": 393,
+    "height": 852,
+    "dpr": 3,
+    "physical_width": 1179,
+    "physical_height": 2556,
+    "chip": "A17 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111829",
+    "chip_source": "https://support.apple.com/en-us/111829",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A17 Pro chip New 6-core CPU with 2 performance and 4 efficiency cores New 6-core GPU New 16-core Neural Engine Camera Pro camera system 48MP Main: 24 mm, &fnof;/1.78 aperture, second-generation sensor-shift optical image",
+      "display": "2556-by-1179-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_15_Pro",
+    "hardware_gpu": "A17 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111829",
+      "https://www.ifixit.com/Device/iPhone_15_Pro"
+    ]
+  },
+  {
+    "id": "ios-iphone-15-plus",
+    "name": "iPhone 15 Plus",
+    "platform": "iPhone",
+    "width": 430,
+    "height": 932,
+    "dpr": 3,
+    "physical_width": 1290,
+    "physical_height": 2796,
+    "chip": "A16 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111830",
+    "chip_source": "https://support.apple.com/en-us/111830",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A16 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera Dual-camera system 48MP Main: 26 mm, &fnof;/1.6 aperture, sensor-shift optical image stabilization, 100% Focus ",
+      "display": "2796-by-1290-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_15_Plus",
+    "hardware_gpu": "A16 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111830",
+      "https://www.ifixit.com/Device/iPhone_15_Plus"
+    ]
+  },
+  {
+    "id": "ios-iphone-15",
+    "name": "iPhone 15",
+    "platform": "iPhone",
+    "width": 393,
+    "height": 852,
+    "dpr": 3,
+    "physical_width": 1179,
+    "physical_height": 2556,
+    "chip": "A16 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111831",
+    "chip_source": "https://support.apple.com/en-us/111831",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A16 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera Dual-camera system 48MP Main: 26 mm, &fnof;/1.6 aperture, sensor-shift optical image stabilization, 100% Focus ",
+      "display": "2556-by-1179-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_15",
+    "hardware_gpu": "A16 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111831",
+      "https://www.ifixit.com/Device/iPhone_15"
+    ]
+  },
+  {
+    "id": "ios-iphone-14-pro-max",
+    "name": "iPhone 14 Pro Max",
+    "platform": "iPhone",
+    "width": 430,
+    "height": 932,
+    "dpr": 3,
+    "physical_width": 1290,
+    "physical_height": 2796,
+    "chip": "A16 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111846",
+    "chip_source": "https://support.apple.com/en-us/111846",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A16 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera Pro camera system 48MP Main: 24 mm, &fnof;/1.78 aperture, second-generation sensor-shift optical image stabiliz",
+      "display": "2796-by-1290-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_14_Pro_Max",
+    "hardware_gpu": "A16 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111846",
+      "https://www.ifixit.com/Device/iPhone_14_Pro_Max"
+    ]
+  },
+  {
+    "id": "ios-iphone-14-pro",
+    "name": "iPhone 14 Pro",
+    "platform": "iPhone",
+    "width": 393,
+    "height": 852,
+    "dpr": 3,
+    "physical_width": 1179,
+    "physical_height": 2556,
+    "chip": "A16 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111849",
+    "chip_source": "https://support.apple.com/en-us/111849",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A16 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera Pro camera system 48MP Main: 24 mm, &fnof;/1.78 aperture, second-generation sensor-shift optical image stabiliz",
+      "display": "2556-by-1179-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_14_Pro",
+    "hardware_gpu": "A16 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111849",
+      "https://www.ifixit.com/Device/iPhone_14_Pro"
+    ]
+  },
+  {
+    "id": "ios-iphone-14-plus",
+    "name": "iPhone 14 Plus",
+    "platform": "iPhone",
+    "width": 428,
+    "height": 926,
+    "dpr": 3,
+    "physical_width": 1284,
+    "physical_height": 2778,
+    "chip": "A15 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111854",
+    "chip_source": "https://support.apple.com/en-us/111854",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A15 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera Dual-camera system 12MP Main: 26 mm, &fnof;/1.5 aperture, sensor-shift optical image stabilization, 100% Focus ",
+      "display": "2778-by-1284-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_14_Plus",
+    "hardware_gpu": "A15 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111854",
+      "https://www.ifixit.com/Device/iPhone_14_Plus"
+    ]
+  },
+  {
+    "id": "ios-iphone-14",
+    "name": "iPhone 14",
+    "platform": "iPhone",
+    "width": 390,
+    "height": 844,
+    "dpr": 3,
+    "physical_width": 1170,
+    "physical_height": 2532,
+    "chip": "A15 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111850",
+    "chip_source": "https://support.apple.com/en-us/111850",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A15 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera Dual-camera system 12MP Main: 26 mm, &fnof;/1.5 aperture, sensor-shift optical image stabilization, 100% Focus ",
+      "display": "2532-by-1170-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_14",
+    "hardware_gpu": "A15 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111850",
+      "https://www.ifixit.com/Device/iPhone_14"
+    ]
+  },
+  {
+    "id": "ios-iphone-se-3rd-generation",
+    "name": "iPhone SE (3rd generation)",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 667,
+    "dpr": 2,
+    "physical_width": 750,
+    "physical_height": 1334,
+    "chip": "A15 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111866",
+    "chip_source": "https://support.apple.com/en-us/111866",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A15 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU 16-core Neural Engine Splash, Water, and Dust Resistant 3 Rated IP67 (maximum depth of 1 meter up to 30 minutes) under IEC standard 60529 Ca",
+      "display": "1334-by-750-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_SE_2022",
+    "hardware_gpu": "A15 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111866",
+      "https://www.ifixit.com/Device/iPhone_SE_2022"
+    ]
+  },
+  {
+    "id": "ios-iphone-13-pro-max",
+    "name": "iPhone 13 Pro Max",
+    "platform": "iPhone",
+    "width": 428,
+    "height": 926,
+    "dpr": 3,
+    "physical_width": 1284,
+    "physical_height": 2778,
+    "chip": "A15 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111870",
+    "chip_source": "https://support.apple.com/en-us/111870",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A15 Bionic chip New 6-core CPU with 2 performance and 4 efficiency cores New 5-core GPU New 16-core Neural Engine Camera Pro 12MP camera system: Telephoto, Wide, and Ultra Wide cameras Telephoto: &fnof;/2.8 aperture Wide",
+      "display": "2778-by-1284-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_13_Pro_Max",
+    "hardware_gpu": "A15 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111870",
+      "https://www.ifixit.com/Device/iPhone_13_Pro_Max"
+    ]
+  },
+  {
+    "id": "ios-iphone-13-pro",
+    "name": "iPhone 13 Pro",
+    "platform": "iPhone",
+    "width": 390,
+    "height": 844,
+    "dpr": 3,
+    "physical_width": 1170,
+    "physical_height": 2532,
+    "chip": "A15 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111871",
+    "chip_source": "https://support.apple.com/en-us/111871",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A15 Bionic chip New 6-core CPU with 2 performance and 4 efficiency cores New 5-core GPU New 16-core Neural Engine Camera Pro 12MP camera system: Telephoto, Wide, and Ultra Wide cameras Telephoto: &fnof;/2.8 aperture Wide",
+      "display": "2532-by-1170-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_13_Pro",
+    "hardware_gpu": "A15 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111871",
+      "https://www.ifixit.com/Device/iPhone_13_Pro"
+    ]
+  },
+  {
+    "id": "ios-iphone-13",
+    "name": "iPhone 13",
+    "platform": "iPhone",
+    "width": 390,
+    "height": 844,
+    "dpr": 3,
+    "physical_width": 1170,
+    "physical_height": 2532,
+    "chip": "A15 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111872",
+    "chip_source": "https://support.apple.com/en-us/111872",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A15 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU 16-core Neural Engine Camera Dual 12MP camera system: Main and Ultra Wide cameras Main: &fnof;/1.6 aperture Ultra Wide: &fnof;/2.4 aperture ",
+      "display": "2532-by-1170-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_13",
+    "hardware_gpu": "A15 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111872",
+      "https://www.ifixit.com/Device/iPhone_13"
+    ]
+  },
+  {
+    "id": "ios-iphone-13-mini",
+    "name": "iPhone 13 mini",
+    "platform": "iPhone",
+    "width": 360,
+    "height": 780,
+    "dpr": 3,
+    "physical_width": 1080,
+    "physical_height": 2340,
+    "chip": "A15 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111873",
+    "chip_source": "https://support.apple.com/en-us/111873",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A15 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU 16-core Neural Engine Camera Dual 12MP camera system: Main and Ultra Wide cameras Main: &fnof;/1.6 aperture Ultra Wide: &fnof;/2.4 aperture ",
+      "display": "2340-by-1080-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_13_mini",
+    "hardware_gpu": "A15 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111873",
+      "https://www.ifixit.com/Device/iPhone_13_mini"
+    ]
+  },
+  {
+    "id": "ios-iphone-12-pro-max",
+    "name": "iPhone 12 Pro Max",
+    "platform": "iPhone",
+    "width": 428,
+    "height": 926,
+    "dpr": 3,
+    "physical_width": 1284,
+    "physical_height": 2778,
+    "chip": "A14 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111874",
+    "chip_source": "https://support.apple.com/en-us/111874",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A14 Bionic chip Next-generation Neural Engine Camera Pro 12MP camera system: Ultra Wide, Wide, and Telephoto cameras Ultra Wide: &fnof;/2.4 aperture and 120&deg; field of view Wide: &fnof;/1.6 aperture Telephoto: &fnof;/",
+      "display": "2778-by-1284-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_12_Pro_Max",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111874",
+      "https://www.ifixit.com/Device/iPhone_12_Pro_Max",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-12-pro",
+    "name": "iPhone 12 Pro",
+    "platform": "iPhone",
+    "width": 390,
+    "height": 844,
+    "dpr": 3,
+    "physical_width": 1170,
+    "physical_height": 2532,
+    "chip": "A14 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111875",
+    "chip_source": "https://support.apple.com/en-us/111875",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A14 Bionic chip Next-generation Neural Engine Camera Pro 12MP camera system: Ultra Wide, Wide, and Telephoto cameras Ultra Wide: &fnof;/2.4 aperture and 120&deg; field of view Wide: &fnof;/1.6 aperture Telephoto: &fnof;/",
+      "display": "2532-by-1170-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_12_Pro",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111875",
+      "https://www.ifixit.com/Device/iPhone_12_Pro",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-12",
+    "name": "iPhone 12",
+    "platform": "iPhone",
+    "width": 390,
+    "height": 844,
+    "dpr": 3,
+    "physical_width": 1170,
+    "physical_height": 2532,
+    "chip": "A14 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111876",
+    "chip_source": "https://support.apple.com/en-us/111876",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A14 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU 16-core Neural Engine Camera Dual 12MP camera system: Main and Ultra Wide cameras Main: &fnof;/1.6 aperture Ultra Wide: &fnof;/2.4 aperture ",
+      "display": "2532-by-1170-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_12",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111876",
+      "https://www.ifixit.com/Device/iPhone_12",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-12-mini",
+    "name": "iPhone 12 mini",
+    "platform": "iPhone",
+    "width": 360,
+    "height": 780,
+    "dpr": 3,
+    "physical_width": 1080,
+    "physical_height": 2340,
+    "chip": "A14 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111877",
+    "chip_source": "https://support.apple.com/en-us/111877",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A14 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU 16-core Neural Engine Camera Dual 12MP camera system: Wide and Ultra Wide cameras Wide: &fnof;/1.6 aperture Ultra Wide: &fnof;/2.4 aperture ",
+      "display": "2340-by-1080-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_12_mini",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111877",
+      "https://www.ifixit.com/Device/iPhone_12_mini",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-se-2nd-generation",
+    "name": "iPhone SE (2nd generation)",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 667,
+    "dpr": 2,
+    "physical_width": 750,
+    "physical_height": 1334,
+    "chip": "A13 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111882",
+    "chip_source": "https://support.apple.com/en-us/111882",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A13 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU 8-core Neural Engine Splash, Water, and Dust Resistant 3 Rated IP67 (maximum depth of 1 meter up to 30 minutes) under IEC standard 60529 Cam",
+      "display": "1334-by-750-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/133066",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111882",
+      "https://www.ifixit.com/Guide/133066",
+      "https://www.ifixit.com/Device/iPhone_SE_2020",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-11-pro",
+    "name": "iPhone 11 Pro",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 812,
+    "dpr": 3,
+    "physical_width": 1125,
+    "physical_height": 2436,
+    "chip": "A13 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111879",
+    "chip_source": "https://support.apple.com/en-us/111879",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A13 Bionic chip Third-generation Neural Engine Camera Triple 12MP Ultra Wide, Wide, and Telephoto cameras Ultra Wide: &fnof;/2.4 aperture and 120&deg; field of view Wide: &fnof;/1.8 aperture Telephoto: &fnof;/2.0 apertur",
+      "display": "2436-by-1125-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_11_Pro",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111879",
+      "https://www.ifixit.com/Device/iPhone_11_Pro",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-11-pro-max",
+    "name": "iPhone 11 Pro Max",
+    "platform": "iPhone",
+    "width": 414,
+    "height": 896,
+    "dpr": 3,
+    "physical_width": 1242,
+    "physical_height": 2688,
+    "chip": "A13 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111878",
+    "chip_source": "https://support.apple.com/en-us/111878",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A13 Bionic chip Third-generation Neural Engine Camera Triple 12MP Ultra Wide, Wide, and Telephoto cameras Ultra Wide: &fnof;/2.4 aperture and 120&deg; field of view Wide: &fnof;/1.8 aperture Telephoto: &fnof;/2.0 apertur",
+      "display": "2688-by-1242-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_11_Pro_Max",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111878",
+      "https://www.ifixit.com/Device/iPhone_11_Pro_Max",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-11",
+    "name": "iPhone 11",
+    "platform": "iPhone",
+    "width": 414,
+    "height": 896,
+    "dpr": 2,
+    "physical_width": 828,
+    "physical_height": 1792,
+    "chip": "A13 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111865",
+    "chip_source": "https://support.apple.com/en-us/111865",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A13 Bionic chip 6-core CPU with 2 performance and 4 efficiency cores 4-core GPU 8-core Neural Engine Camera Dual 12MP Wide and Ultra Wide cameras Wide: &fnof;/1.8 aperture Ultra Wide: &fnof;/2.4 aperture and 120&deg; fie",
+      "display": "1792-by-828-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_11",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111865",
+      "https://www.ifixit.com/Device/iPhone_11",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-xs",
+    "name": "iPhone XS",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 812,
+    "dpr": 3,
+    "physical_width": 1125,
+    "physical_height": 2436,
+    "chip": "A12 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111881",
+    "chip_source": "https://support.apple.com/en-us/111881",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12 Bionic chip Next-generation Neural Engine Camera Dual 12MP wide-angle and telephoto cameras Wide-angle: &fnof;/1.8 aperture Telephoto: &fnof;/2.4 aperture 2x optical zoom; digital zoom up to 10x Portrait mode with ad",
+      "display": "2436-by-1125-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/113021",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111881",
+      "https://www.ifixit.com/Guide/113021",
+      "https://www.ifixit.com/Device/iPhone_XS",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-iphone-xs-max",
+    "name": "iPhone XS Max",
+    "platform": "iPhone",
+    "width": 414,
+    "height": 896,
+    "dpr": 3,
+    "physical_width": 1242,
+    "physical_height": 2688,
+    "chip": "A12 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111880",
+    "chip_source": "https://support.apple.com/en-us/111880",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12 Bionic chip Next-generation Neural Engine Camera Dual 12MP wide-angle and telephoto cameras Wide-angle: &fnof;/1.8 aperture Telephoto: &fnof;/2.4 aperture 2x optical zoom; digital zoom up to 10x Portrait mode with ad",
+      "display": "2688-by-1242-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/113021",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111880",
+      "https://www.ifixit.com/Guide/113021",
+      "https://www.ifixit.com/Device/iPhone_XS_Max",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-iphone-xr",
+    "name": "iPhone XR",
+    "platform": "iPhone",
+    "width": 414,
+    "height": 896,
+    "dpr": 2,
+    "physical_width": 828,
+    "physical_height": 1792,
+    "chip": "A12 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111868",
+    "chip_source": "https://support.apple.com/en-us/111868",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12 Bionic chip Second-generation Neural Engine Camera 12MP Wide camera &fnof;/1.8 aperture Digital zoom up to 5x Portrait mode with advanced bokeh and Depth Control Portrait Lighting with three effects (Natural, Studio,",
+      "display": "1792-by-828-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/114123",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111868",
+      "https://www.ifixit.com/Guide/114123",
+      "https://www.ifixit.com/Device/iPhone_XR",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-iphone-x",
+    "name": "iPhone X",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 812,
+    "dpr": 3,
+    "physical_width": 1125,
+    "physical_height": 2436,
+    "chip": "A11 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      3
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111864",
+    "chip_source": "https://support.apple.com/en-us/111864",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A11 Bionic chip with 64-bit architecture Neural engine Embedded M11 motion coprocessor Camera 12MP wide-angle and telephoto cameras Wide-angle: &fnof;/1.8 aperture Telephoto: &fnof;/2.4 aperture Optical zoom; digital zoo",
+      "display": "2436-by-1125-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_X",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111864",
+      "https://www.ifixit.com/Device/iPhone_X",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-iphone-8",
+    "name": "iPhone 8",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 667,
+    "dpr": 2,
+    "physical_width": 750,
+    "physical_height": 1334,
+    "chip": "A11 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      3
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111976",
+    "chip_source": "https://support.apple.com/en-us/111976",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A11 Bionic chip Neural Engine Camera Single 12MP Wide camera Wide: &fnof;/1.8 aperture Digital zoom up to 5x Optical image stabilization Six-element lens LED True Tone flash with Slow Sync Panorama (up to 63MP) Live Phot",
+      "display": "1334-by-750-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/97481",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111976",
+      "https://www.ifixit.com/Guide/97481",
+      "https://www.ifixit.com/Device/iPhone_8",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-iphone-8-plus",
+    "name": "iPhone 8 Plus",
+    "platform": "iPhone",
+    "width": 414,
+    "height": 736,
+    "dpr": 3,
+    "physical_width": 1080,
+    "physical_height": 1920,
+    "chip": "A11 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      3
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111950",
+    "chip_source": "https://support.apple.com/en-us/111950",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": "Viewport quy ước 414 × 736; màn hình có bước downsampling",
+    "evidence": {
+      "chip": "A11 Bionic chip Neural Engine Camera Dual 12MP Wide and Telephoto cameras Wide: &fnof;/1.8 aperture Telephoto: &fnof;/2.8 aperture 2x optical zoom in; digital zoom up to 10x Portrait mode Portrait Lighting with five effe",
+      "display": "1920-by-1080-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_8_Plus",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111950",
+      "https://www.ifixit.com/Device/iPhone_8_Plus",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-iphone-7",
+    "name": "iPhone 7",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 667,
+    "dpr": 2,
+    "physical_width": 750,
+    "physical_height": 1334,
+    "chip": "A10 Fusion",
+    "cpu_core_variants": [
+      4
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 4,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111943",
+    "chip_source": "https://support.apple.com/en-us/111943",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A10 Fusion chip Camera 12MP camera &fnof;/1.8 aperture Digital zoom up to 5x Optical image stabilization Six-element lens Quad-LED True Tone flash Panorama (up to 63MP) Sapphire crystal lens cover Backside illumination s",
+      "display": "1334-by-750-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/67382",
+    "hardware_gpu": "PowerVR Series7XT (6 clusters)",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111943",
+      "https://www.ifixit.com/Guide/67382",
+      "https://www.ifixit.com/Device/iPhone_7",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-7-plus",
+    "name": "iPhone 7 Plus",
+    "platform": "iPhone",
+    "width": 414,
+    "height": 736,
+    "dpr": 3,
+    "physical_width": 1080,
+    "physical_height": 1920,
+    "chip": "A10 Fusion",
+    "cpu_core_variants": [
+      4
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 4,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111953",
+    "chip_source": "https://support.apple.com/en-us/111953",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": "Viewport quy ước 414 × 736; màn hình có bước downsampling",
+    "evidence": {
+      "chip": "A10 Fusion chip Camera Dual 12MP wide-angle and telephoto cameras Wide-angle: &fnof;/1.8 aperture Telephoto: &fnof;/2.8 aperture 2x optical zoom; digital zoom up to 10x Portrait mode Optical image stabilization Six-eleme",
+      "display": "1920-by-1080-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/67384",
+    "hardware_gpu": "PowerVR Series7XT (6 clusters)",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111953",
+      "https://www.ifixit.com/Guide/67384",
+      "https://www.ifixit.com/Device/iPhone_7_Plus",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-se-1st-generation",
+    "name": "iPhone SE (1st generation)",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 568,
+    "dpr": 2,
+    "physical_width": 640,
+    "physical_height": 1136,
+    "chip": "A9",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112005",
+    "chip_source": "https://support.apple.com/en-us/112005",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A9 chip with 64-bit architecture Embedded M9 motion coprocessor Camera 12-megapixel camera &fnof;/2.2 aperture Five-element lens 5x digital zoom Live Photos with stabilization Local tone mapping Face detection True Tone ",
+      "display": "1136-by-640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_SE",
+    "hardware_gpu": "PowerVR GT7600",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112005",
+      "https://www.ifixit.com/Device/iPhone_SE",
+      "https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/2"
+    ]
+  },
+  {
+    "id": "ios-iphone-6s",
+    "name": "iPhone 6s",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 667,
+    "dpr": 2,
+    "physical_width": 750,
+    "physical_height": 1334,
+    "chip": "A9",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111952",
+    "chip_source": "https://support.apple.com/en-us/111952",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A9 chip with 64-bit architecture Embedded M9 motion coprocessor Camera 12-megapixel camera Live Photos with stabilization Autofocus with Focus Pixels Optical image stabilization (iPhone 6s Plus only) True Tone flash Pano",
+      "display": "1334-by-750-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_6s",
+    "hardware_gpu": "PowerVR GT7600",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111952",
+      "https://www.ifixit.com/Device/iPhone_6s",
+      "https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/2"
+    ]
+  },
+  {
+    "id": "ios-iphone-6s-plus",
+    "name": "iPhone 6s Plus",
+    "platform": "iPhone",
+    "width": 414,
+    "height": 736,
+    "dpr": 3,
+    "physical_width": 1080,
+    "physical_height": 1920,
+    "chip": "A9",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111996",
+    "chip_source": "https://support.apple.com/en-us/111996",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": "Viewport quy ước 414 × 736; màn hình có bước downsampling",
+    "evidence": {
+      "chip": "A9 chip with 64-bit architecture Embedded M9 motion coprocessor Camera 12-megapixel camera Live Photos with stabilization Autofocus with Focus Pixels Optical image stabilization (iPhone 6s Plus only) True Tone flash Pano",
+      "display": "1920-by-1080-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_6s_Plus",
+    "hardware_gpu": "PowerVR GT7600",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111996",
+      "https://www.ifixit.com/Device/iPhone_6s_Plus",
+      "https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/2"
+    ]
+  },
+  {
+    "id": "ios-iphone-6",
+    "name": "iPhone 6",
+    "platform": "iPhone",
+    "width": 375,
+    "height": 667,
+    "dpr": 2,
+    "physical_width": 750,
+    "physical_height": 1334,
+    "chip": "A8",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111954",
+    "chip_source": "https://support.apple.com/en-us/111954",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A8 chip with 64-bit architecture M8 motion coprocessor iSight Camera 8-megapixel iSight camera with 1.5&micro; pixels Autofocus with Focus Pixels &fnof;/2.2 aperture Optical image stabilization (iPhone 6 Plus only) True ",
+      "display": "1334-by-750-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_6",
+    "hardware_gpu": "PowerVR GX6450",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111954",
+      "https://www.ifixit.com/Device/iPhone_6",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-6-plus",
+    "name": "iPhone 6 Plus",
+    "platform": "iPhone",
+    "width": 414,
+    "height": 736,
+    "dpr": 3,
+    "physical_width": 1080,
+    "physical_height": 1920,
+    "chip": "A8",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111940",
+    "chip_source": "https://support.apple.com/en-us/111940",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": "Viewport quy ước 414 × 736; màn hình có bước downsampling",
+    "evidence": {
+      "chip": "A8 chip with 64-bit architecture M8 motion coprocessor iSight Camera 8-megapixel iSight camera with 1.5&micro; pixels Autofocus with Focus Pixels &fnof;/2.2 aperture Optical image stabilization (iPhone 6 Plus only) True ",
+      "display": "1920-by-1080-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_6_Plus",
+    "hardware_gpu": "PowerVR GX6450",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111940",
+      "https://www.ifixit.com/Device/iPhone_6_Plus",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-5s",
+    "name": "iPhone 5s",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 568,
+    "dpr": 2,
+    "physical_width": 640,
+    "physical_height": 1136,
+    "chip": "A7",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111973",
+    "chip_source": "https://support.apple.com/en-us/111973",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A7 chip with 64-bit architecture M7 motion coprocessor Cellular and Wireless Model A1533 (GSM)*: UMTS/HSPA+/DC-HSDPA (850, 900, 1700/2100, 1900, 2100 MHz); GSM/EDGE (850, 900, 1800, 1900 MHz); LTE (Bands 1, 2, 3, 4, 5, 8",
+      "display": "1136-by-640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_5s",
+    "hardware_gpu": "PowerVR G6430",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111973",
+      "https://www.ifixit.com/Device/iPhone_5s",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-5c",
+    "name": "iPhone 5c",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 568,
+    "dpr": 2,
+    "physical_width": 640,
+    "physical_height": 1136,
+    "chip": "A6",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      3
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111917",
+    "chip_source": "https://support.apple.com/en-us/111917",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A6 chip Cellular and Wireless Model A1532 (GSM)*: UMTS/HSPA+/DC-HSDPA (850, 900, 1700/2100, 1900, 2100 MHz); GSM/EDGE (850, 900, 1800, 1900 MHz); LTE (Bands 1, 2, 3, 4, 5, 8, 13, 17, 19, 20, 25) Model A1532 (CDMA)*: CDMA",
+      "display": "1136-by-640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_5c",
+    "hardware_gpu": "PowerVR SGX543MP3",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111917",
+      "https://www.ifixit.com/Device/iPhone_5c",
+      "https://www.eetimes.com/apple-processors-designed-differently-but-here-to-stay/"
+    ]
+  },
+  {
+    "id": "ios-iphone-5",
+    "name": "iPhone 5",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 568,
+    "dpr": 2,
+    "physical_width": 640,
+    "physical_height": 1136,
+    "chip": "A6",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      3
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112016",
+    "chip_source": "https://www.apple.com/newsroom/2012/09/12Apple-Introduces-iPhone-5/",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "",
+      "display": "1136-by-640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_5",
+    "hardware_gpu": "PowerVR SGX543MP3",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112016",
+      "https://www.ifixit.com/Device/iPhone_5",
+      "https://www.eetimes.com/apple-processors-designed-differently-but-here-to-stay/"
+    ]
+  },
+  {
+    "id": "ios-iphone-4s",
+    "name": "iPhone 4s",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 480,
+    "dpr": 2,
+    "physical_width": 640,
+    "physical_height": 960,
+    "chip": "A5",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      2
+    ],
+    "memory_gb_variants": [
+      0.5
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 0.5,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112004",
+    "chip_source": "https://www.apple.com/newsroom/2011/10/04Apple-Launches-iPhone-4S-iOS-5-iCloud/",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "",
+      "display": "960-by-640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_4s",
+    "hardware_gpu": "PowerVR SGX543MP2",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112004",
+      "https://www.ifixit.com/Device/iPhone_4s",
+      "https://www.anandtech.com/Show/Index/4225?all=False&page=5&slug=the-ipad-2-review"
+    ]
+  },
+  {
+    "id": "ios-iphone-4",
+    "name": "iPhone 4",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 480,
+    "dpr": 2,
+    "physical_width": 640,
+    "physical_height": 960,
+    "chip": "A4",
+    "cpu_core_variants": [
+      1
+    ],
+    "gpu_core_variants": [
+      1
+    ],
+    "memory_gb_variants": [
+      0.5
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 1,
+      "device_memory": 0.5,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112562",
+    "chip_source": "https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "",
+      "display": "960-by-640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_4",
+    "hardware_gpu": "PowerVR SGX535",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112562",
+      "https://www.ifixit.com/Device/iPhone_4",
+      "https://www.ifixit.com/Device/iPad_Wi-Fi"
+    ]
+  },
+  {
+    "id": "ios-iphone-3gs",
+    "name": "iPhone 3GS",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 480,
+    "dpr": 1,
+    "physical_width": 320,
+    "physical_height": 480,
+    "chip": "Samsung ARM Cortex-A8",
+    "cpu_core_variants": [
+      1
+    ],
+    "gpu_core_variants": [
+      1
+    ],
+    "memory_gb_variants": [
+      0.25
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 1,
+      "device_memory": 0.25,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112307",
+    "chip_source": "https://support.apple.com/en-us/112307",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "",
+      "display": "480-by-320-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_3GS",
+    "hardware_gpu": "PowerVR GX6450",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112307",
+      "https://www.ifixit.com/Device/iPhone_3GS",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-iphone-3g",
+    "name": "iPhone 3G",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 480,
+    "dpr": 1,
+    "physical_width": 320,
+    "physical_height": 480,
+    "chip": "Samsung ARM11",
+    "cpu_core_variants": [
+      1
+    ],
+    "gpu_core_variants": [
+      1
+    ],
+    "memory_gb_variants": [
+      0.125
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 1,
+      "device_memory": 0.125,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112496",
+    "chip_source": "https://support.apple.com/en-us/112496",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "",
+      "display": "480-by-320-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_3G",
+    "hardware_gpu": "PowerVR MBX Lite",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112496",
+      "https://www.ifixit.com/Device/iPhone_3G"
+    ]
+  },
+  {
+    "id": "ios-iphone",
+    "name": "iPhone",
+    "platform": "iPhone",
+    "width": 320,
+    "height": 480,
+    "dpr": 1,
+    "physical_width": 320,
+    "physical_height": 480,
+    "chip": "Samsung ARM11",
+    "cpu_core_variants": [
+      1
+    ],
+    "gpu_core_variants": [
+      1
+    ],
+    "memory_gb_variants": [
+      0.125
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 1,
+      "device_memory": 0.125,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112445",
+    "chip_source": "https://support.apple.com/en-us/112445",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "",
+      "display": "480-by-320-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPhone_1st_Generation",
+    "hardware_gpu": "PowerVR MBX Lite",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112445",
+      "https://www.ifixit.com/Device/iPhone_1st_Generation"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-13-inch-m5",
+    "name": "iPad Pro 13-inch (M5)",
+    "platform": "iPad",
+    "width": 1032,
+    "height": 1376,
+    "dpr": 2,
+    "physical_width": 2064,
+    "physical_height": 2752,
+    "chip": "Apple M5",
+    "cpu_core_variants": [
+      9,
+      10
+    ],
+    "gpu_core_variants": [
+      10
+    ],
+    "memory_gb_variants": [
+      12,
+      16
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 9,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/125407",
+    "chip_source": "https://support.apple.com/en-us/125407",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M5 chip Models with 256GB or 512GB storage: 9-core CPU with 3 super cores and 6 efficiency cores 10-core GPU Neural Accelerators Hardware-accelerated ray tracing 16-core Neural Engine 153GB/s memory bandwidth 12GB ",
+      "display": "2752-by-2064-pixel resolution"
+    },
+    "hardware_gpu": "Apple M5 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/125407"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-11-inch-m5",
+    "name": "iPad Pro 11-inch (M5)",
+    "platform": "iPad",
+    "width": 834,
+    "height": 1210,
+    "dpr": 2,
+    "physical_width": 1668,
+    "physical_height": 2420,
+    "chip": "Apple M5",
+    "cpu_core_variants": [
+      9,
+      10
+    ],
+    "gpu_core_variants": [
+      10
+    ],
+    "memory_gb_variants": [
+      12,
+      16
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 9,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/125406",
+    "chip_source": "https://support.apple.com/en-us/125406",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M5 chip Models with 256GB or 512GB storage: 9-core CPU with 3 super cores and 6 efficiency cores 10-core GPU Neural Accelerators Hardware-accelerated ray tracing 16-core Neural Engine 153GB/s memory bandwidth 12GB ",
+      "display": "2420-by-1668-pixel resolution"
+    },
+    "hardware_gpu": "Apple M5 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/125406"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-13-inch-m4",
+    "name": "iPad Pro 13-inch (M4)",
+    "platform": "iPad",
+    "width": 1032,
+    "height": 1376,
+    "dpr": 2,
+    "physical_width": 2064,
+    "physical_height": 2752,
+    "chip": "Apple M4",
+    "cpu_core_variants": [
+      9,
+      10
+    ],
+    "gpu_core_variants": [
+      10
+    ],
+    "memory_gb_variants": [
+      8,
+      16
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 9,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/119891",
+    "chip_source": "https://support.apple.com/en-us/119891",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M4 chip Models with 256GB or 512GB storage: 9-core CPU with 3 performance cores and 6 efficiency cores 10-core GPU Hardware-accelerated ray tracing 16-core Neural Engine 120GB/s memory bandwidth 8GB RAM Models with",
+      "display": "2752-by-2064-pixel resolution"
+    },
+    "hardware_gpu": "Apple M4 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/119891"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-11-inch-m4",
+    "name": "iPad Pro 11-inch (M4)",
+    "platform": "iPad",
+    "width": 834,
+    "height": 1210,
+    "dpr": 2,
+    "physical_width": 1668,
+    "physical_height": 2420,
+    "chip": "Apple M4",
+    "cpu_core_variants": [
+      9,
+      10
+    ],
+    "gpu_core_variants": [
+      10
+    ],
+    "memory_gb_variants": [
+      8,
+      16
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 9,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/119892",
+    "chip_source": "https://support.apple.com/en-us/119892",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M4 chip Models with 256GB or 512GB storage: 9-core CPU with 3 performance cores and 6 efficiency cores 10-core GPU Hardware-accelerated ray tracing 16-core Neural Engine 120GB/s memory bandwidth 8GB RAM Models with",
+      "display": "2420-by-1668-pixel resolution"
+    },
+    "hardware_gpu": "Apple M4 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/119892"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-12-9-inch-6th-generation",
+    "name": "iPad Pro 12.9-inch (6th generation)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "Apple M2",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      10
+    ],
+    "memory_gb_variants": [
+      8,
+      16
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111841",
+    "chip_source": "https://support.apple.com/en-us/111841",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M2 chip 8-core CPU with 4 performance cores and 4 efficiency cores 10-core GPU 16-core Neural Engine 100GB/s memory bandwidth 8GB RAM on models with 128GB, 256GB, or 512GB storage 16GB RAM on models with 1TB or 2TB",
+      "display": "2732-by-2048-pixel resolution"
+    },
+    "hardware_gpu": "Apple M2 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111841"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-11-inch-4th-generation",
+    "name": "iPad Pro 11-inch (4th generation)",
+    "platform": "iPad",
+    "width": 834,
+    "height": 1194,
+    "dpr": 2,
+    "physical_width": 1668,
+    "physical_height": 2388,
+    "chip": "Apple M2",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      10
+    ],
+    "memory_gb_variants": [
+      8,
+      16
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111842",
+    "chip_source": "https://support.apple.com/en-us/111842",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M2 chip 8-core CPU with 4 performance cores and 4 efficiency cores 10-core GPU 16-core Neural Engine 100GB/s memory bandwidth 8GB RAM on models with 128GB, 256GB, or 512GB storage 16GB RAM on models with 1TB or 2TB",
+      "display": "2388-by-1668-pixel resolution"
+    },
+    "hardware_gpu": "Apple M2 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111842"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-12-9-inch-5th-generation",
+    "name": "iPad Pro 12.9-inch (5th generation)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "Apple M1",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      8
+    ],
+    "memory_gb_variants": [
+      8,
+      16
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111896",
+    "chip_source": "https://support.apple.com/en-us/111896",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M1 chip 8-core CPU with 4 performance cores and 4 efficiency cores 8-core GPU 16-core Neural Engine 8GB RAM on models with 128GB, 256GB, or 512GB storage 16GB RAM on models with 1TB or 2TB storage Apple Intelligenc",
+      "display": "2732-by-2048-pixel resolution"
+    },
+    "hardware_gpu": "Apple M1 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111896"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-11-inch-3rd-generation",
+    "name": "iPad Pro 11-inch (3rd generation)",
+    "platform": "iPad",
+    "width": 834,
+    "height": 1194,
+    "dpr": 2,
+    "physical_width": 1668,
+    "physical_height": 2388,
+    "chip": "Apple M1",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      8
+    ],
+    "memory_gb_variants": [
+      8,
+      16
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111897",
+    "chip_source": "https://support.apple.com/en-us/111897",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M1 chip 8-core CPU with 4 performance cores and 4 efficiency cores 8-core GPU 16-core Neural Engine 8GB RAM on models with 128GB, 256GB, or 512GB storage 16GB RAM on models with 1TB or 2TB storage Apple Intelligenc",
+      "display": "2388-by-1668-pixel resolution"
+    },
+    "hardware_gpu": "Apple M1 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111897"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-12-9-inch-4th-generation",
+    "name": "iPad Pro 12.9-inch (4th generation)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "A12Z Bionic",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      8
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111977",
+    "chip_source": "https://support.apple.com/en-us/111977",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12Z Bionic chip with 64-bit architecture Neural Engine Camera Wide: 12MP, &fnof;/1.8 aperture Ultra Wide: 10MP, &fnof;/2.4 aperture, and 125&deg; field of view 2x optical zoom out; digital zoom up to 5x Five-element len",
+      "display": "2732-by-2048-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Pro_12.9%22_4th_Gen",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111977",
+      "https://www.ifixit.com/Device/iPad_Pro_12.9%22_4th_Gen",
+      "https://www.techinsights.com/blog/looking-apple-a12z-bionic-system-chip"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-11-inch-2nd-generation",
+    "name": "iPad Pro 11-inch (2nd generation)",
+    "platform": "iPad",
+    "width": 834,
+    "height": 1194,
+    "dpr": 2,
+    "physical_width": 1668,
+    "physical_height": 2388,
+    "chip": "A12Z Bionic",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      8
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/118452",
+    "chip_source": "https://support.apple.com/en-us/118452",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12Z Bionic chip with 64-bit architecture Neural Engine Camera Wide: 12MP, &fnof;/1.8 aperture Ultra Wide: 10MP, &fnof;/2.4 aperture, and 125&deg; field of view 2x optical zoom out; digital zoom up to 5x Five-element len",
+      "display": "2388-by-1668-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Pro_11%22_2nd_Gen",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/118452",
+      "https://www.ifixit.com/Device/iPad_Pro_11%22_2nd_Gen",
+      "https://www.techinsights.com/blog/looking-apple-a12z-bionic-system-chip"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-12-9-inch-3rd-generation",
+    "name": "iPad Pro 12.9-inch (3rd generation)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "A12X Bionic",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      7
+    ],
+    "memory_gb_variants": [
+      4,
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111979",
+    "chip_source": "https://support.apple.com/en-us/111979",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12X Bionic chip with 64-bit architecture Neural Engine Embedded M12 coprocessor Camera 12-megapixel camera &fnof;/1.8 aperture Digital zoom up to 5x Five-element lens Quad-LED True Tone flash Panorama (up to 63 megapixe",
+      "display": "2732-by-2048-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Pro_12.9%22_3rd_Gen",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111979",
+      "https://www.ifixit.com/Device/iPad_Pro_12.9%22_3rd_Gen",
+      "https://www.techinsights.com/blog/looking-apple-a12z-bionic-system-chip"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-11-inch",
+    "name": "iPad Pro 11-inch",
+    "platform": "iPad",
+    "width": 834,
+    "height": 1194,
+    "dpr": 2,
+    "physical_width": 1668,
+    "physical_height": 2388,
+    "chip": "A12X Bionic",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      7
+    ],
+    "memory_gb_variants": [
+      4,
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111974",
+    "chip_source": "https://support.apple.com/en-us/111974",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12X Bionic chip with 64-bit architecture Neural Engine Embedded M12 coprocessor Camera 12-megapixel camera &fnof;/1.8 aperture Digital zoom up to 5x Five-element lens Quad-LED True Tone flash Panorama (up to 63 megapixe",
+      "display": "2388-by-1668-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/115457",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111974",
+      "https://www.ifixit.com/Guide/115457",
+      "https://www.techinsights.com/blog/looking-apple-a12z-bionic-system-chip"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-12-9-inch-2nd-generation",
+    "name": "iPad Pro 12.9-inch (2nd generation)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "A10X Fusion",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      12
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111964",
+    "chip_source": "https://support.apple.com/en-us/111964",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A10X Fusion chip with 64-bit architecture Embedded M10 coprocessor Camera 12-megapixel camera &fnof;/1.8 aperture Digital zoom up to 5x Optical image stabilization Six-element lens Quad-LED True Tone flash Panorama (up t",
+      "display": "2732-by-2048 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Pro_12.9%22_2nd_Gen",
+    "hardware_gpu": "PowerVR Series7XT (12 clusters)",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111964",
+      "https://www.ifixit.com/Device/iPad_Pro_12.9%22_2nd_Gen",
+      "https://www.apple.com/sa/newsroom/2017/06/ipad-pro-10-5-and-12-9-inch-models-introduces-worlds-most-advanced-display-breakthrough-performance/"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-10-5-inch",
+    "name": "iPad Pro (10.5-inch)",
+    "platform": "iPad",
+    "width": 834,
+    "height": 1112,
+    "dpr": 2,
+    "physical_width": 1668,
+    "physical_height": 2224,
+    "chip": "A10X Fusion",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      12
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 120,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111927",
+    "chip_source": "https://support.apple.com/en-us/111927",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A10X Fusion chip with 64-bit architecture Embedded M10 coprocessor Camera 12-megapixel camera &fnof;/1.8 aperture Digital zoom up to 5x Optical image stabilization Six-element lens Quad-LED True Tone flash Panorama (up t",
+      "display": "2224-by-1668 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/92534",
+    "hardware_gpu": "PowerVR Series7XT (12 clusters)",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111927",
+      "https://www.ifixit.com/Guide/92534",
+      "https://www.apple.com/sa/newsroom/2017/06/ipad-pro-10-5-and-12-9-inch-models-introduces-worlds-most-advanced-display-breakthrough-performance/"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-9-7-inch",
+    "name": "iPad Pro (9.7-inch)",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A9X",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      12
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111965",
+    "chip_source": "https://support.apple.com/en-us/111965",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A9X chip with 64-bit architecture Embedded M9 coprocessor Camera 12-megapixel camera Live Photos Autofocus with Focus Pixels True Tone flash Wide color photo capture Panorama (up to 63 megapixels) Auto HDR for photos Exp",
+      "display": "2048-by-1536 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/60939",
+    "hardware_gpu": "PowerVR Series7XT (12 clusters)",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111965",
+      "https://www.ifixit.com/Guide/60939",
+      "https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/2"
+    ]
+  },
+  {
+    "id": "ios-ipad-pro-12-9-inch",
+    "name": "iPad Pro (12.9-inch)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "A9X",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      12
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112024",
+    "chip_source": "https://support.apple.com/en-us/112024",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A9X chip with 64-bit architecture Embedded M9 coprocessor Camera 8-megapixel camera Autofocus Panorama (up to 43 megapixels) HDR for photos Exposure control Burst mode Tap to focus Timer mode &fnof;/2.4 aperture Five-ele",
+      "display": "2732-by-2048 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Pro_12.9%22",
+    "hardware_gpu": "PowerVR Series7XT (12 clusters)",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112024",
+      "https://www.ifixit.com/Device/iPad_Pro_12.9%22",
+      "https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/2"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-13-inch-m4",
+    "name": "iPad Air 13-inch (M4)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "Apple M4",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      9
+    ],
+    "memory_gb_variants": [
+      12
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/126472",
+    "chip_source": "https://support.apple.com/en-us/126472",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M4 chip 8-core CPU with 3 performance cores and 5 efficiency cores 9-core GPU Hardware-accelerated ray tracing 16-core Neural Engine 120GB/s memory bandwidth 12GB unified memory Media Engine Hardware-accelerated H.",
+      "display": "2732-by-2048-pixel resolution"
+    },
+    "hardware_gpu": "Apple M4 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/126472"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-11-inch-m4",
+    "name": "iPad Air 11-inch (M4)",
+    "platform": "iPad",
+    "width": 820,
+    "height": 1180,
+    "dpr": 2,
+    "physical_width": 1640,
+    "physical_height": 2360,
+    "chip": "Apple M4",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      9
+    ],
+    "memory_gb_variants": [
+      12
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 12,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/126471",
+    "chip_source": "https://support.apple.com/en-us/126471",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M4 chip 8-core CPU with 3 performance cores and 5 efficiency cores 9-core GPU Hardware-accelerated ray tracing 16-core Neural Engine 120GB/s memory bandwidth 12GB unified memory Media Engine Hardware-accelerated H.",
+      "display": "2360-by-1640-pixel resolution"
+    },
+    "hardware_gpu": "Apple M4 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/126471"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-13-inch-m3",
+    "name": "iPad Air 13-inch (M3)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "Apple M3",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      9
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/122242",
+    "chip_source": "https://support.apple.com/en-us/122242",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M3 chip 8-core CPU with 4 performance cores and 4 efficiency cores 9-core GPU Hardware-accelerated ray tracing 16-core Neural Engine 8GB RAM Media Engine Hardware-accelerated 8K HEVC, 4K H.264, ProRes, and ProRes R",
+      "display": "2732-by-2048-pixel resolution"
+    },
+    "hardware_gpu": "Apple M3 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/122242"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-11-inch-m3",
+    "name": "iPad Air 11-inch (M3)",
+    "platform": "iPad",
+    "width": 820,
+    "height": 1180,
+    "dpr": 2,
+    "physical_width": 1640,
+    "physical_height": 2360,
+    "chip": "Apple M3",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      9
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/122241",
+    "chip_source": "https://support.apple.com/en-us/122241",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M3 chip 8-core CPU with 4 performance cores and 4 efficiency cores 9-core GPU Hardware-accelerated ray tracing 16-core Neural Engine 8GB RAM Media Engine Hardware-accelerated 8K HEVC, 4K H.264, ProRes, and ProRes R",
+      "display": "2360-by-1640-pixel resolution"
+    },
+    "hardware_gpu": "Apple M3 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/122241"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-13-m2",
+    "name": "iPad Air 13-inch (M2)",
+    "platform": "iPad",
+    "width": 1024,
+    "height": 1366,
+    "dpr": 2,
+    "physical_width": 2048,
+    "physical_height": 2732,
+    "chip": "Apple M2",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      9
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/119893",
+    "chip_source": "https://support.apple.com/en-us/119893",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M2 chip 8-core CPU with 4 performance cores and 4 efficiency cores 9-core GPU 16-core Neural Engine 8GB RAM Media Engine Hardware-accelerated H.264 and HEVC Video decode engine Video encode engine Apple Intelligenc",
+      "display": "2732-by-2048-pixel resolution"
+    },
+    "hardware_gpu": "Apple M2 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/119893"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-11-m2",
+    "name": "iPad Air 11-inch (M2)",
+    "platform": "iPad",
+    "width": 820,
+    "height": 1180,
+    "dpr": 2,
+    "physical_width": 1640,
+    "physical_height": 2360,
+    "chip": "Apple M2",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      9
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/119894",
+    "chip_source": "https://support.apple.com/en-us/119894",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M2 chip 8-core CPU with 4 performance cores and 4 efficiency cores 9-core GPU 16-core Neural Engine 8GB RAM Media Engine Hardware-accelerated H.264 and HEVC Video decode engine Video encode engine Apple Intelligenc",
+      "display": "2360-by-1640-pixel resolution"
+    },
+    "hardware_gpu": "Apple M2 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/119894"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-5th-generation",
+    "name": "iPad Air (5th generation)",
+    "platform": "iPad",
+    "width": 820,
+    "height": 1180,
+    "dpr": 2,
+    "physical_width": 1640,
+    "physical_height": 2360,
+    "chip": "Apple M1",
+    "cpu_core_variants": [
+      8
+    ],
+    "gpu_core_variants": [
+      8
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 8,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111887",
+    "chip_source": "https://support.apple.com/en-us/111887",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Apple M1 chip 8-core CPU with 4 performance cores and 4 efficiency cores 8-core GPU 16-core Neural Engine 8GB RAM Media engine Hardware-accelerated H.264 and HEVC Video decode engine Video encode engine Apple Intelligenc",
+      "display": "2360-by-1640-pixel resolution"
+    },
+    "hardware_gpu": "Apple M1 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111887",
+      "https://www.ifixit.com/Device/iPad_Air_5"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-4th-generation",
+    "name": "iPad Air (4th generation)",
+    "platform": "iPad",
+    "width": 820,
+    "height": 1180,
+    "dpr": 2,
+    "physical_width": 1640,
+    "physical_height": 2360,
+    "chip": "A14 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111905",
+    "chip_source": "https://support.apple.com/en-us/111905",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A14 Bionic chip with 64-bit architecture Neural Engine Camera 12MP Wide camera &fnof;/1.8 aperture Five-element lens Hybrid IR ﬁlter Backside illumination sensor Live Photos with stabilization Autofocus with Focus Pixels",
+      "display": "2360-by-1640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Air_4",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111905",
+      "https://www.ifixit.com/Device/iPad_Air_4",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-3rd-generation",
+    "name": "iPad Air (3rd generation)",
+    "platform": "iPad",
+    "width": 834,
+    "height": 1112,
+    "dpr": 2,
+    "physical_width": 1668,
+    "physical_height": 2224,
+    "chip": "A12 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111939",
+    "chip_source": "https://support.apple.com/en-us/111939",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12 Bionic chip with 64-bit architecture Neural Engine Embedded M12 coprocessor Camera 8-megapixel camera &fnof;/2.4 aperture Five-element lens Hybrid IR ﬁlter Backside illumination Live Photos Wide color capture for pho",
+      "display": "2224-by-1668 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/121759",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111939",
+      "https://www.ifixit.com/Guide/121759",
+      "https://www.ifixit.com/Device/iPad_Air_3",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-ipad-air-2",
+    "name": "iPad Air 2",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A8X",
+    "cpu_core_variants": [
+      3
+    ],
+    "gpu_core_variants": [
+      8
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 3,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112017",
+    "chip_source": "https://support.apple.com/en-us/112017",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A8X chip with 64-bit architecture M8 motion coprocessor iSight Camera 8MP iSight camera Autofocus Panorama (up to 43MP) Auto HDR for photos Exposure control Burst mode Tap to focus Timer mode &fnof;/2.4 aperture Five-ele",
+      "display": "2048-by-1536-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Air_2",
+    "hardware_gpu": "PowerVR GXA6850",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112017",
+      "https://www.ifixit.com/Device/iPad_Air_2",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-air",
+    "name": "iPad Air",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A7",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112020",
+    "chip_source": "https://support.apple.com/en-us/112020",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A7 chip with 64-bit architecture and M7 motion coprocessor Wireless and Cellular Wi-Fi Wi-Fi (802.11a/b/g/n); dual channel (2.4GHz and 5GHz) and MIMO Bluetooth 4.0 technology Wi-Fi + Cellular Wi-Fi (802.11a/b/g/n); dual ",
+      "display": "2048-by-1536 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Air",
+    "hardware_gpu": "PowerVR G6430",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112020",
+      "https://www.ifixit.com/Device/iPad_Air",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-mini-a17-pro",
+    "name": "iPad mini (A17 Pro)",
+    "platform": "iPad",
+    "width": 744,
+    "height": 1133,
+    "dpr": 2,
+    "physical_width": 1488,
+    "physical_height": 2266,
+    "chip": "A17 Pro",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      8
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 8,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/121456",
+    "chip_source": "https://support.apple.com/en-us/121456",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A17 Pro chip 6-core CPU with 2 performance cores and 4 efficiency cores 5-core GPU 16-core Neural Engine Apple Intelligence 3 Built into your iPad, Apple Intelligence is the personal intelligence system that helps you wr",
+      "display": "2266-by-1488 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Mini_7",
+    "hardware_gpu": "A17 Pro GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/121456",
+      "https://www.ifixit.com/Device/iPad_Mini_7"
+    ]
+  },
+  {
+    "id": "ios-ipad-mini-6th-generation",
+    "name": "iPad mini (6th generation)",
+    "platform": "iPad",
+    "width": 744,
+    "height": 1133,
+    "dpr": 2,
+    "physical_width": 1488,
+    "physical_height": 2266,
+    "chip": "A15 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      5
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111886",
+    "chip_source": "https://support.apple.com/en-us/111886",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A15 Bionic chip 6-core CPU with 2 performance cores and 4 efficiency cores 5-core GPU 16-core Neural Engine Camera 12MP Wide camera, &fnof;/1.8 aperture Digital zoom up to 5x Five-element lens Quad-LED True Tone flash Au",
+      "display": "2266-by-1488 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_mini_6",
+    "hardware_gpu": "A15 Bionic GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111886",
+      "https://www.ifixit.com/Device/iPad_mini_6"
+    ]
+  },
+  {
+    "id": "ios-ipad-mini-5th-generation",
+    "name": "iPad mini (5th generation)",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A12 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "p3",
+    "source": "https://support.apple.com/en-us/111904",
+    "chip_source": "https://support.apple.com/en-us/111904",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12 Bionic chip with 64-bit architecture Neural Engine Camera 8-megapixel camera &fnof;/2.4 aperture Five-element lens Hybrid IR filter Backside illumination Live Photos Wide color capture for photos and Live Photos Auto",
+      "display": "2048-by-1536 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/121589",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111904",
+      "https://www.ifixit.com/Guide/121589",
+      "https://www.ifixit.com/Device/iPad_mini_5",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-ipad-mini-4",
+    "name": "iPad mini 4",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A8",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112002",
+    "chip_source": "https://support.apple.com/en-us/112002",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A8 chip with 64-bit architecture M8 motion coprocessor Camera 8MP camera Autofocus Panorama (up to 43MP) Auto HDR for photos Exposure control Burst mode Tap to focus Timer mode &fnof;/2.4 aperture Five-element lens Hybri",
+      "display": "2048-by-1536 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Mini_4",
+    "hardware_gpu": "PowerVR GX6450",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112002",
+      "https://www.ifixit.com/Device/iPad_Mini_4",
+      "https://www.ifixit.com/Device/iPad_mini_4",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-mini-3",
+    "name": "iPad mini 3",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A7",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112018",
+    "chip_source": "https://support.apple.com/en-us/112018",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A7 chip with 64-bit architecture M7 motion coprocessor iSight Camera 5MP iSight camera Autofocus Face detection Backside illumination Five-element lens Hybrid IR filter &fnof;/2.4 aperture Tap to focus video or still ima",
+      "display": "2048-by-1536 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/30628",
+    "hardware_gpu": "PowerVR G6430",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112018",
+      "https://www.ifixit.com/Guide/30628",
+      "https://www.ifixit.com/Device/iPad_mini_3",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-mini-2",
+    "name": "iPad mini 2",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A7",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112019",
+    "chip_source": "https://support.apple.com/en-us/112019",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A7 chip with 64-bit architecture and M7 motion coprocessor Wireless and Cellular Wi-Fi Wi-Fi (802.11a/b/g/n); dual channel (2.4GHz and 5GHz) and MIMO Bluetooth 4.0 technology Wi-Fi + Cellular Wi-Fi (802.11a/b/g/n); dual ",
+      "display": "2048-by-1536 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Mini_2",
+    "hardware_gpu": "PowerVR G6430",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112019",
+      "https://www.ifixit.com/Device/iPad_Mini_2",
+      "https://www.ifixit.com/Device/iPad_mini_2",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-mini",
+    "name": "iPad mini",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 1,
+    "physical_width": 768,
+    "physical_height": 1024,
+    "chip": "A5",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      2
+    ],
+    "memory_gb_variants": [
+      0.5
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 0.5,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111978",
+    "chip_source": "https://support.apple.com/en-us/111978",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Dual-core A5 Cameras, Photos, and Video Recording FaceTime HD Camera 1.2MP photos 720p HD video FaceTime video calling over Wi-Fi or cellular4 Face detection Backside illumination Tap to control exposure for video or sti",
+      "display": "1024-by-768 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_mini",
+    "hardware_gpu": "PowerVR SGX543MP2",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111978",
+      "https://www.ifixit.com/Device/iPad_mini",
+      "https://www.anandtech.com/Show/Index/4225?all=False&page=5&slug=the-ipad-2-review"
+    ]
+  },
+  {
+    "id": "ios-ipad-a16",
+    "name": "iPad (A16)",
+    "platform": "iPad",
+    "width": 820,
+    "height": 1180,
+    "dpr": 2,
+    "physical_width": 1640,
+    "physical_height": 2360,
+    "chip": "A16",
+    "cpu_core_variants": [
+      5
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      6
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 5,
+      "device_memory": 6,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/122240",
+    "chip_source": "https://support.apple.com/en-us/122240",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A16 chip 5-core CPU 4-core GPU 16-core Neural Engine Camera 12MP Wide camera, &fnof;/1.8 aperture Digital zoom up to 5x Five-element lens Autofocus with Focus Pixels Panorama (up to 63MP) Smart HDR 4 Photo geotagging Aut",
+      "display": "2360-by-1640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_11",
+    "hardware_gpu": "A16 GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/122240",
+      "https://www.ifixit.com/Device/iPad_11"
+    ]
+  },
+  {
+    "id": "ios-ipad-10th-generation",
+    "name": "iPad (10th generation)",
+    "platform": "iPad",
+    "width": 820,
+    "height": 1180,
+    "dpr": 2,
+    "physical_width": 1640,
+    "physical_height": 2360,
+    "chip": "A14 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      4
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 4,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111840",
+    "chip_source": "https://support.apple.com/en-us/111840",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A14 Bionic chip 6-core CPU 4-core graphics 16-core Neural Engine Camera 12MP Wide camera, &fnof;/1.8 aperture Digital zoom up to 5x Five-element lens Autofocus with Focus Pixels Panorama (up to 63MP) Smart HDR 3 Photo ge",
+      "display": "2360-by-1640-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_10",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111840",
+      "https://www.ifixit.com/Device/iPad_10",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-9th-generation",
+    "name": "iPad (9th generation)",
+    "platform": "iPad",
+    "width": 810,
+    "height": 1080,
+    "dpr": 2,
+    "physical_width": 1620,
+    "physical_height": 2160,
+    "chip": "A13 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111898",
+    "chip_source": "https://support.apple.com/en-us/111898",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A13 Bionic chip Neural Engine Camera 8MP Wide camera &fnof;/2.4 aperture Digital zoom up to 5x Five-element lens Panorama (up to 43MP) HDR for photos Photo geotagging Auto image stabilization Burst mode Video Recording 1",
+      "display": "2160-by-1620-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_9",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111898",
+      "https://www.ifixit.com/Device/iPad_9",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-8th-generation",
+    "name": "iPad (8th generation)",
+    "platform": "iPad",
+    "width": 810,
+    "height": 1080,
+    "dpr": 2,
+    "physical_width": 1620,
+    "physical_height": 2160,
+    "chip": "A12 Bionic",
+    "cpu_core_variants": [
+      6
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 6,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/118451",
+    "chip_source": "https://support.apple.com/en-us/118451",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A12 Bionic chip with 64-bit architecture Neural Engine Camera 8MP camera &fnof;/2.4 aperture Five-element lens Hybrid IR ﬁlter Backside illumination Live Photos Autofocus Panorama (up to 43MP) HDR for photos Exposure con",
+      "display": "2160-by-1620-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_8",
+    "hardware_gpu": "Apple GPU",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/118451",
+      "https://www.ifixit.com/Device/iPad_8",
+      "https://www.apple.com/iphone/compare/"
+    ]
+  },
+  {
+    "id": "ios-ipad-7th-generation",
+    "name": "iPad (7th generation)",
+    "platform": "iPad",
+    "width": 810,
+    "height": 1080,
+    "dpr": 2,
+    "physical_width": 1620,
+    "physical_height": 2160,
+    "chip": "A10 Fusion",
+    "cpu_core_variants": [
+      4
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      3
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 4,
+      "device_memory": 3,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111911",
+    "chip_source": "https://support.apple.com/en-us/111911",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A10 Fusion chip with 64-bit architecture Embedded M10 coprocessor Camera 8-megapixel camera &fnof;/2.4 aperture Five-element lens Hybrid IR ﬁlter Backside illumination Live Photos Autofocus Panorama (up to 43 megapixels)",
+      "display": "2160-by-1620-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Guide/126291",
+    "hardware_gpu": "PowerVR Series7XT (6 clusters)",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111911",
+      "https://www.ifixit.com/Guide/126291",
+      "https://www.ifixit.com/Device/iPad_7",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-6th-generation",
+    "name": "iPad (6th generation)",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A10 Fusion",
+    "cpu_core_variants": [
+      4
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 4,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111957",
+    "chip_source": "https://support.apple.com/en-us/111957",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A10 Fusion chip with 64-bit architecture Embedded M10 coprocessor Camera 8-megapixel camera Live Photos Autofocus Panorama (up to 43 megapixels) HDR for photos Exposure control Burst mode Tap to focus Timer mode &fnof;/2",
+      "display": "2048-by-1536-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_6",
+    "hardware_gpu": "PowerVR Series7XT (6 clusters)",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111957",
+      "https://www.ifixit.com/Device/iPad_6",
+      "https://www.anandtech.com/show/8716/apple-a8xs-gpu-gxa6850-even-better-than-i-thought"
+    ]
+  },
+  {
+    "id": "ios-ipad-5th-generation",
+    "name": "iPad (5th generation)",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A9",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      6
+    ],
+    "memory_gb_variants": [
+      2
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 2,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111960",
+    "chip_source": "https://support.apple.com/en-us/111960",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "A9 chip with 64-bit architecture Embedded M9 coprocessor Camera 8-megapixel camera Live Photos Autofocus Panorama (up to 43 megapixels) HDR for photos Exposure control Burst mode Tap to focus Timer mode &fnof;/2.4 apertu",
+      "display": "2048-by-1536-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/News/8955/2017-ipad-teardown",
+    "hardware_gpu": "PowerVR GT7600",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111960",
+      "https://www.ifixit.com/News/8955/2017-ipad-teardown",
+      "https://www.ifixit.com/Device/iPad_5",
+      "https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/2"
+    ]
+  },
+  {
+    "id": "ios-ipad-4th-generation",
+    "name": "iPad (4th generation)",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "A6X",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111993",
+    "chip_source": "https://support.apple.com/en-us/111993",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Dual-core A6X with quad-core graphics Cameras, Photos, and Video Recording FaceTime HD Camera 1.2MP photos 720p HD video FaceTime video calling over Wi-Fi or cellular 4 Face detection Backside illumination Tap to control",
+      "display": "2048-by-1536 resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_4",
+    "hardware_gpu": "PowerVR SGX554MP4",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111993",
+      "https://www.ifixit.com/Device/iPad_4",
+      "https://www.eetimes.com/apple-processors-designed-differently-but-here-to-stay/"
+    ]
+  },
+  {
+    "id": "ios-ipad-3rd-generation",
+    "name": "iPad (3rd generation)",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 2,
+    "physical_width": 1536,
+    "physical_height": 2048,
+    "chip": "Apple A5X",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      4
+    ],
+    "memory_gb_variants": [
+      1
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 1,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111992",
+    "chip_source": "https://support.apple.com/en-us/111992",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "Dual-core Apple A5X custom-designed, high-performance, low-power system-on-a-chip with quad-core graphics Wireless and Cellular Wi-Fi Wi-Fi (802.11a/b/g/n) Bluetooth 4.0 technology Wi-Fi + Cellular Wi-Fi (802.11a/b/g/n) ",
+      "display": "2048-by-1536-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_3",
+    "hardware_gpu": "PowerVR SGX543MP4",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111992",
+      "https://www.ifixit.com/Device/iPad_3",
+      "https://www.apple.com/newsroom/2012/03/07Apple-Launches-New-iPad/"
+    ]
+  },
+  {
+    "id": "ios-ipad-2",
+    "name": "iPad 2",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 1,
+    "physical_width": 768,
+    "physical_height": 1024,
+    "chip": "Apple A5",
+    "cpu_core_variants": [
+      2
+    ],
+    "gpu_core_variants": [
+      2
+    ],
+    "memory_gb_variants": [
+      0.5
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 2,
+      "device_memory": 0.5,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/111990",
+    "chip_source": "https://support.apple.com/en-us/111990",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "1GHz dual-core Apple A5 custom-designed, high-performance, low-power system-on-a-chip Cameras, Photos, and Video Recording Back camera: Video recording, HD (720p) up to 30 frames per second with audio; still camera with ",
+      "display": "1024-by-768-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_2_Wi-Fi_EMC_2415",
+    "hardware_gpu": "PowerVR SGX543MP2",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/111990",
+      "https://www.ifixit.com/Device/iPad_2_Wi-Fi_EMC_2415",
+      "https://www.anandtech.com/Show/Index/4225?all=False&page=5&slug=the-ipad-2-review"
+    ]
+  },
+  {
+    "id": "ios-ipad",
+    "name": "iPad",
+    "platform": "iPad",
+    "width": 768,
+    "height": 1024,
+    "dpr": 1,
+    "physical_width": 768,
+    "physical_height": 1024,
+    "chip": "Apple A4",
+    "cpu_core_variants": [
+      1
+    ],
+    "gpu_core_variants": [
+      1
+    ],
+    "memory_gb_variants": [
+      0.25
+    ],
+    "simulation_defaults": {
+      "hardware_concurrency": 1,
+      "device_memory": 0.25,
+      "cpu_basis": "hardware_reference",
+      "memory_basis": "hardware_reference"
+    },
+    "refresh_rate": 60,
+    "color_gamut": "srgb",
+    "source": "https://support.apple.com/en-us/112438",
+    "chip_source": "https://support.apple.com/en-us/112438",
+    "verified_at": "2026-10-24",
+    "fingerprint_status": "hardware_specs_only",
+    "display_note": null,
+    "evidence": {
+      "chip": "1GHz Apple A4 custom-designed, high-performance, low-power system-on-a-chip Sensors Accelerometer Ambient light sensor Audio playback Frequency response: 20Hz to 20,000Hz Audio formats supported: HE-AAC (V1), AAC (16 to ",
+      "display": "1024-by-768-pixel resolution"
+    },
+    "memory_source": "https://www.ifixit.com/Device/iPad_Wi-Fi",
+    "hardware_gpu": "PowerVR SGX535",
+    "hardware_sources": [
+      "https://support.apple.com/en-us/112438",
+      "https://www.ifixit.com/Device/iPad_Wi-Fi"
+    ]
+  }
+]

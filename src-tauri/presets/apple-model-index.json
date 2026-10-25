@@ -1,0 +1,502 @@
+[
+  {
+    "name": "iPhone Duo",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/148588"
+  },
+  {
+    "name": "iPhone 18 Pro Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/en-us/148591"
+  },
+  {
+    "name": "iPhone 18 Pro",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/en-us/148590"
+  },
+  {
+    "name": "iPhone 17e",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/126470"
+  },
+  {
+    "name": "iPhone 17 Pro Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/125091"
+  },
+  {
+    "name": "iPhone 17 Pro",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/125090"
+  },
+  {
+    "name": "iPhone 17",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/125089"
+  },
+  {
+    "name": "iPhone Air",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/125092"
+  },
+  {
+    "name": "iPhone 16e",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/122208"
+  },
+  {
+    "name": "iPhone 16 Pro Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/121032"
+  },
+  {
+    "name": "iPhone 16 Pro",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/121031"
+  },
+  {
+    "name": "iPhone 16 Plus",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/121030"
+  },
+  {
+    "name": "iPhone 16",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/121029"
+  },
+  {
+    "name": "iPhone 15 Pro Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP904"
+  },
+  {
+    "name": "iPhone 15 Pro",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP903"
+  },
+  {
+    "name": "iPhone 15 Plus",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP902"
+  },
+  {
+    "name": "iPhone 15",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP901"
+  },
+  {
+    "name": "iPhone 14 Pro Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP876"
+  },
+  {
+    "name": "iPhone 14 Pro",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP875"
+  },
+  {
+    "name": "iPhone 14 Plus",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP874"
+  },
+  {
+    "name": "iPhone 14",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP873"
+  },
+  {
+    "name": "iPhone SE (3rd generation)",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP867"
+  },
+  {
+    "name": "iPhone 13 Pro Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP848"
+  },
+  {
+    "name": "iPhone 13 Pro",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP852"
+  },
+  {
+    "name": "iPhone 13",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP851"
+  },
+  {
+    "name": "iPhone 13 mini",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP847"
+  },
+  {
+    "name": "iPhone 12 Pro Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP832"
+  },
+  {
+    "name": "iPhone 12 Pro",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP831"
+  },
+  {
+    "name": "iPhone 12",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP830"
+  },
+  {
+    "name": "iPhone 12 mini",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP829"
+  },
+  {
+    "name": "iPhone SE (2nd generation)",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP820"
+  },
+  {
+    "name": "iPhone 11 Pro",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP805"
+  },
+  {
+    "name": "iPhone 11 Pro Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP806"
+  },
+  {
+    "name": "iPhone 11",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP804"
+  },
+  {
+    "name": "iPhone XS",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP779"
+  },
+  {
+    "name": "iPhone XS Max",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP780"
+  },
+  {
+    "name": "iPhone XR",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP781"
+  },
+  {
+    "name": "iPhone X",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP770"
+  },
+  {
+    "name": "iPhone 8",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP767"
+  },
+  {
+    "name": "iPhone 8 Plus",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP768"
+  },
+  {
+    "name": "iPhone 7",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP743"
+  },
+  {
+    "name": "iPhone 7 Plus",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP744"
+  },
+  {
+    "name": "iPhone SE (1st generation)",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP738"
+  },
+  {
+    "name": "iPhone 6s",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP726"
+  },
+  {
+    "name": "iPhone 6s Plus",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP727"
+  },
+  {
+    "name": "iPhone 6",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP705"
+  },
+  {
+    "name": "iPhone 6 Plus",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP706"
+  },
+  {
+    "name": "iPhone 5s",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP685"
+  },
+  {
+    "name": "iPhone 5c",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP684"
+  },
+  {
+    "name": "iPhone 5",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP655"
+  },
+  {
+    "name": "iPhone 4s",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP643"
+  },
+  {
+    "name": "iPhone 4",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP587"
+  },
+  {
+    "name": "iPhone 3GS",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP565"
+  },
+  {
+    "name": "iPhone 3G",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP495"
+  },
+  {
+    "name": "iPhone",
+    "platform": "iPhone",
+    "source": "https://support.apple.com/kb/SP2"
+  },
+  {
+    "name": "iPad Pro 13-inch (M5)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/125407"
+  },
+  {
+    "name": "iPad Pro 11-inch (M5)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/125406"
+  },
+  {
+    "name": "iPad Pro 13-inch (M4)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/119891"
+  },
+  {
+    "name": "iPad Pro 11-inch (M4)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/119892"
+  },
+  {
+    "name": "iPad Pro 12.9-inch (6th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP883"
+  },
+  {
+    "name": "iPad Pro 11-inch (4th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP882"
+  },
+  {
+    "name": "iPad Pro 12.9-inch (5th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP844"
+  },
+  {
+    "name": "iPad Pro 11-inch (3rd generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP843"
+  },
+  {
+    "name": "iPad Pro 12.9-inch (4th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP815"
+  },
+  {
+    "name": "iPad Pro 11-inch (2nd generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP814"
+  },
+  {
+    "name": "iPad Pro 12.9-inch (3rd generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP785"
+  },
+  {
+    "name": "iPad Pro 11-inch",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP784"
+  },
+  {
+    "name": "iPad Pro 12.9-inch (2nd generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP761"
+  },
+  {
+    "name": "iPad Pro (10.5-inch)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP762"
+  },
+  {
+    "name": "iPad Pro (9.7-inch)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP739"
+  },
+  {
+    "name": "iPad Pro (12.9-inch)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP723"
+  },
+  {
+    "name": "iPad Air 13‑inch (M4)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/126472"
+  },
+  {
+    "name": "iPad Air 11‑inch (M4)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/126471"
+  },
+  {
+    "name": "iPad Air 13-inch (M3)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/122242"
+  },
+  {
+    "name": "iPad Air 11-inch (M3)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/122241"
+  },
+  {
+    "name": "iPad Air 13-inch (M2)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/119893"
+  },
+  {
+    "name": "iPad Air 11-inch (M2)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/119894"
+  },
+  {
+    "name": "iPad Air (5th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP866"
+  },
+  {
+    "name": "iPad Air (4th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP828"
+  },
+  {
+    "name": "iPad Air (3rd generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP787"
+  },
+  {
+    "name": "iPad Air 2",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP708"
+  },
+  {
+    "name": "iPad Air",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP692"
+  },
+  {
+    "name": "iPad mini (A17 Pro)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/121456"
+  },
+  {
+    "name": "iPad mini (6th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP850"
+  },
+  {
+    "name": "iPad mini (5th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP788"
+  },
+  {
+    "name": "iPad mini 4",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP725"
+  },
+  {
+    "name": "iPad mini 3",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP709"
+  },
+  {
+    "name": "iPad mini 2",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP693"
+  },
+  {
+    "name": "iPad mini",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP661"
+  },
+  {
+    "name": "iPad (A16)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/122240"
+  },
+  {
+    "name": "iPad (10th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP884"
+  },
+  {
+    "name": "iPad (9th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP849"
+  },
+  {
+    "name": "iPad (8th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP822"
+  },
+  {
+    "name": "iPad (7th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP807"
+  },
+  {
+    "name": "iPad (6th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP774"
+  },
+  {
+    "name": "iPad (5th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP751"
+  },
+  {
+    "name": "iPad (4th generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP662"
+  },
+  {
+    "name": "iPad (3rd generation)",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP647"
+  },
+  {
+    "name": "iPad 2",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/sp622"
+  },
+  {
+    "name": "iPad",
+    "platform": "iPad",
+    "source": "https://support.apple.com/kb/SP580"
+  }
+]
