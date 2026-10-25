@@ -1,6 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { invoke } from "@tauri-apps/api/core";
-import { Badge, CopyButton, CountRoll, IconButton, Kbd, NavItem, Popover, Tooltip, cn, useContextMenu, useRovingFocus, type MenuItem } from "@proxyshard/shardx-ui-kit";
+import { Badge, CountRoll, IconButton, Kbd, NavItem, Tooltip, cn, useContextMenu, useRovingFocus, type MenuItem } from "@proxyshard/shardx-ui-kit";
 import {
   FolderAddIconApp,
   FOLDER_ICON_GLYPHS,
@@ -36,9 +36,6 @@ import {
 import { useProxy } from "../../entities/proxy";
 import { leaveEditor } from "../../entities/automation";
 import { useFingerprint } from "../../entities/fingerprint";
-import { apiInfo } from "../../entities/settings";
-import { clip } from "../../shared/lib/clipboard";
-import { toast } from "../../shared/model/toast";
 import { deleteView } from "../../features/manage-views";
 import { usePalette } from "../../features/command-palette";
 import { ariaOf, capOf, menuItemsFor } from "../../features/commands";
@@ -607,118 +604,6 @@ function FolderItem({ name, count, compact, active, onOpen, onDropProfiles, onCo
   );
 }
 
-type ApiState = { kind: "starting" } | { kind: "error" } | { kind: "off" } | { kind: "on"; port: number; url: string };
-
-/** The local automation API's state: one 32 px row (a word and the port; the
- *  dot is decoration) that opens a small popover with the address and the way
- *  to its settings. Only what `api_info` reports is shown: no invented fields
- *  (the rest is backend B42). */
-function ApiStatus({ compact }: { compact: boolean }) {
-  const t = useT();
-  const openSettings = useNav((s) => s.openSettings);
-  const [state, setState] = useState<ApiState>({ kind: "starting" });
-  const [open, setOpen] = useState(false);
-  const rowRef = useRef<HTMLButtonElement>(null);
-  useEffect(() => {
-    // Through the entity, so its first read (at start) is the running server.
-    apiInfo()
-      .then((i) => setState(i.enabled ? { kind: "on", port: i.port, url: i.base_url } : { kind: "off" }))
-      .catch(() => setState({ kind: "error" }));
-  }, []);
-  const word = state.kind === "on" ? t("sidebar.apiOn") : state.kind === "off" ? t("sidebar.apiOff") : state.kind === "error" ? t("sidebar.apiError") : t("sidebar.apiStarting");
-  // The visible word leads the name (WCAG 2.5.3), then what it is.
-  const fullLabel = state.kind === "on" ? t("sidebar.apiOnLabel", { port: state.port }) : t("sidebar.apiNameOther", { word });
-  const copy = async () => {
-    if (state.kind !== "on") return;
-    try {
-      await clip.write(state.url);
-      toast.ok(t("kit.copied"));
-    } catch (e) {
-      toast.fail({ title: t("copyField.failed"), detail: e });
-      throw e;
-    }
-  };
-  const dotClass = state.kind === "on" ? "bg-success-base" : state.kind === "off" ? "bg-idle" : "bg-warning-base";
-  const dot = <span aria-hidden="true" className={cn("size-[7px] rounded-full forced-content", dotClass)} />;
-  // Same look as the NavItem rows above (28 px, small), with the port after the
-  // word and the copy icon's room kept empty at the end.
-  const row = (
-    // eslint-disable-next-line no-restricted-syntax -- a NavItem row whose label carries the port after the word
-    <button
-      ref={rowRef}
-      type="button"
-      data-api-status
-      aria-label={fullLabel}
-      aria-haspopup="dialog"
-      // The rail has no fold headings: its tests count aria-expanded as one.
-      aria-expanded={compact ? undefined : open}
-      onClick={() => setOpen((o) => !o)}
-      className={cn(
-        "relative flex h-[28px] w-full shrink-0 items-center gap-[8px] rounded-control px-[8px] text-left text-ui focus-ring [&>*]:pointer-events-none",
-        compact && "justify-center px-0",
-        // Active equals hover (owner, 2026-10-01); pressed one step darker.
-        open ? "bg-bg-hover text-text-strong-950 active:bg-bg-active" : "bg-transparent text-text-sub-600 hover:bg-bg-hover hover:text-text-strong-950 active:bg-bg-active",
-      )}
-    >
-      <span className="flex size-3.5 shrink-0 items-center justify-center">{dot}</span>
-      {!compact && (
-        <span className="flex min-w-0 flex-1 items-baseline gap-[6px] truncate">
-          <span>{word}</span>
-          {state.kind === "on" && <span data-api-port className="text-secondary tabular-nums text-text-soft-400">:{state.port}</span>}
-        </span>
-      )}
-    </button>
-  );
-  const popover = (
-    <Popover open={open} onOpenChange={setOpen} anchorRef={rowRef} side="top" align="start" offset={6} aria-label={t("sidebar.apiTitle")} className="w-[248px]">
-      <div data-api-popover className="flex flex-col px-[14px] py-[10px]">
-        <div className="flex min-h-[34px] items-center justify-between gap-2">
-          <span className="text-ui text-text-strong-950">{t("sidebar.apiTitle")}</span>
-          <span className="flex items-center gap-[6px] text-secondary text-text-sub-600">{dot}{word}</span>
-        </div>
-        {state.kind === "on" ? (
-          <div data-api-address className="grid min-h-[34px] grid-cols-[56px_minmax(0,1fr)_24px] items-center gap-2 border-t border-stroke-soft-200">
-            <span className="text-secondary text-text-soft-400">{t("sidebar.apiAddress")}</span>
-            <span data-selectable className="truncate text-ui tabular-nums text-text-strong-950">{state.url}</span>
-            <CopyButton size="3xsmall" label={t("details.copy", { label: t("sidebar.apiAddress") })} onCopy={copy} />
-          </div>
-        ) : (
-          <p className="m-0 min-h-[34px] border-t border-stroke-soft-200 py-2 text-secondary text-text-soft-400">
-            {state.kind === "off" ? t("sidebar.apiPopOff") : state.kind === "error" ? t("sidebar.apiPopError") : t("sidebar.apiPopStarting")}
-          </p>
-        )}
-        {/* eslint-disable-next-line no-restricted-syntax -- a text link row in the popover */}
-        <button
-          type="button"
-          data-api-settings
-          onClick={() => { setOpen(false); openSettings("api", { focus: true }); }}
-          className="mt-0.5 flex min-h-[34px] items-center border-t border-stroke-soft-200 text-left text-ui text-primary-text focus-ring"
-        >
-          {t("sidebar.apiSettingsLink")}
-        </button>
-      </div>
-    </Popover>
-  );
-  if (compact) return <>{<Tooltip content={fullLabel} side="right">{row}</Tooltip>}{popover}</>;
-  return (
-    <>
-      {/* The hairline sits directly above this row (owner, 2026-10-01). */}
-      <div aria-hidden="true" className="mx-2 my-1.5 border-t border-stroke-soft-200" />
-      <div className="flex items-center gap-1">
-        <div className="group/api relative min-w-0 flex-1">
-          {row}
-          {state.kind === "on" && (
-            <span data-api-copy className="invisible absolute inset-y-0 right-[2px] flex translate-x-1 items-center opacity-0 transition-[opacity,translate,visibility] duration-(--motion-base) ease-out group-hover/api:visible group-hover/api:translate-x-0 group-hover/api:opacity-100 group-focus-within/api:visible group-focus-within/api:translate-x-0 group-focus-within/api:opacity-100">
-              <CopyButton size="3xsmall" label={t("details.copy", { label: t("sidebar.apiAddress") })} onCopy={copy} />
-            </span>
-          )}
-        </div>
-      </div>
-      {popover}
-    </>
-  );
-}
-
 /** The launcher version; opens What's new and flags an available update. */
 function VersionItem({ compact }: { compact: boolean }) {
   const t = useT();
@@ -905,13 +790,11 @@ export function Sidebar() {
         </ScrollArea>
       </nav>
 
-      {/* No rule over the footer (borderless): the hairline above the API
-          row is its one line. */}
+      {/* Sidebar footer. */}
       <div data-sidebar-footer className="flex shrink-0 flex-col gap-0.5 p-2">
         <PageItem id="trash" label={t("sidebar.navTrash")} icon={<NavTrashIcon className="size-3.5" />} compact={compact} />
         <PageItem id="settings" label={t("sidebar.navSettings")} icon={<NavSettingsIcon className="size-3.5" />} compact={compact} />
         <VersionItem compact={compact} />
-        <ApiStatus compact={compact} />
       </div>
     </aside>
   );
